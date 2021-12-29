@@ -1,28 +1,26 @@
 package ir.dotin.bigdata.project.mabnaapirestful.controller;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.StudentModel;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.BondAuthorityTypesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.service.BondAuthorityTypesService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/dotin")
 public class MyController {
-    @Autowired
-    private StudentModel studentModel;
+    private final BondAuthorityTypesService bondAuthorityTypesService;
 
-    @GetMapping("/student/{name}/{id}")
-    public ResponseEntity<StudentModel> studentModel(@PathVariable String name, @PathVariable long id) {
-        studentModel.setName(name);
-        studentModel.setId(id);
-
-        return new ResponseEntity<>(studentModel, HttpStatus.OK);
+    public MyController(BondAuthorityTypesService bondAuthorityTypesService) {
+        this.bondAuthorityTypesService = bondAuthorityTypesService;
     }
 
-    @PostMapping("/student/setter")
-    public ResponseEntity<StudentModel> set(@RequestBody StudentModel studentModel){
-        System.out.println(studentModel);
-        return new ResponseEntity<>(null, HttpStatus.BAD_GATEWAY);
+    @GetMapping("/get")
+    public ResponseEntity<BondAuthorityTypesResponse> set() throws JsonProcessingException {
+
+        return new ResponseEntity<>(bondAuthorityTypesService.response(), HttpStatus.OK);
     }
 }
