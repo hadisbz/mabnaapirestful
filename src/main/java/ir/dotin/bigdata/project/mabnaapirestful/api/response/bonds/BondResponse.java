@@ -1,4 +1,4 @@
-package ir.dotin.bigdata.project.mabnaapirestful.api.response.bond;
+package ir.dotin.bigdata.project.mabnaapirestful.api.response.bonds;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
