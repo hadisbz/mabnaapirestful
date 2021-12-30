@@ -1,22 +1,20 @@
 package ir.dotin.bigdata.project.mabnaapirestful.api.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Value;
+import lombok.Getter;
 
-@Value
+@Getter
 public class MetaResponse {
-    public Long version;
-    public String state;
+    private String type;
+    private Integer version;
+    private String state;
 
     @JsonProperty("insert_date_time")
-    public String insertDateTime;
+    private String insertDateTime;
 
     @JsonProperty("update_date_time")
-    public String updateDateTime;
+    private String updateDateTime;
 
     @JsonProperty("delete_date_time")
-    public String deleteDateTime;
-
-    @JsonProperty("type")
-    public String type;
+    private String deleteDateTime;
 }

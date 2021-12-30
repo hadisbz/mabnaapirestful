@@ -1,10 +1,12 @@
 package ir.dotin.bigdata.project.mabnaapirestful.api.response;
 
-import lombok.Value;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 
 import java.util.List;
 
-@Value
+@Getter
 public class Root<T> {
-    public List<T> data;
+    @JsonProperty("data")
+    private List<T> data;
 }

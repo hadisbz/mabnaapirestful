@@ -3,12 +3,12 @@ package ir.dotin.bigdata.project.mabnaapirestful.api.response.bond;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
-import lombok.Value;
+import lombok.Getter;
 
-@Value
+@Getter
 public class BondResponse {
-    public String id;
+    private String id;
 
     @JsonProperty("meta")
-    public MetaResponse metaResponse;
+    private MetaResponse metaResponse;
 }

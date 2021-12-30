@@ -20,7 +20,7 @@ public class BondController {
     }
 
     @GetMapping("/interestpayments")
-    public ResponseEntity<Root<BondInterestPaymentsResponse>> set() throws JsonProcessingException {
+    public ResponseEntity<Root<BondInterestPaymentsResponse>> getInterestPayments() throws JsonProcessingException {
         return new ResponseEntity<>(bondAuthorityTypesService.response(), HttpStatus.OK);
     }
 }

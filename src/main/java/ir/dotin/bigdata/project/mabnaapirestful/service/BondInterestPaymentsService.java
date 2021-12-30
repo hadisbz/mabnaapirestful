@@ -22,7 +22,6 @@ public class BondInterestPaymentsService implements GenericService<BondInterestP
     @Override
     public Root<BondInterestPaymentsResponse> response() throws JsonProcessingException {
         ResponseEntity<String> response = mabnaConf.getResponse("/bond/interestpayments", HttpMethod.GET);
-        System.out.println(response.getBody());
         return objectMapper.readValue(response.getBody(), Root.class);
     }
 }
