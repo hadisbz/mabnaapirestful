@@ -26,7 +26,6 @@ public class MabnaConf {
     }
 
     public ResponseEntity<String> getResponse(String path, HttpMethod httpMethod) {
-        System.out.println(url.concat(path));
         return restTemplate.exchange(
                 url.concat(path),
                 httpMethod,

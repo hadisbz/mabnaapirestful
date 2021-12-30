@@ -5,18 +5,18 @@ import lombok.Value;
 
 @Value
 public class MetaResponse {
-    Long version;
-    String state;
+    public Long version;
+    public String state;
 
     @JsonProperty("insert_date_time")
-    String insertDateTime;
+    public String insertDateTime;
 
     @JsonProperty("update_date_time")
-    String updateDateTime;
+    public String updateDateTime;
 
     @JsonProperty("delete_date_time")
-    String deleteDateTime;
+    public String deleteDateTime;
 
     @JsonProperty("type")
-    String type;
+    public String type;
 }
