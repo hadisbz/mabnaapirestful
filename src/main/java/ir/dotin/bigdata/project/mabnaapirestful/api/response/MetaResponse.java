@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 public class MetaResponse {
     private String type;
-    private Integer version;
+    private Long version;
     private String state;
 
     @JsonProperty("insert_date_time")
