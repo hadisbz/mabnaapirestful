@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
 import lombok.Getter;
 
+import java.util.List;
+
 @Getter
 public class OccasionTypesResponse {
     private String id;
@@ -14,5 +16,5 @@ public class OccasionTypesResponse {
     private String englishTitle;
 
     @JsonProperty("meta")
-    private MetaResponse metaResponse;
+    private MetaResponse meta;
 }

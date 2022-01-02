@@ -6,6 +6,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.api.response.Root;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.bonds.BondInterestPaymentsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
+import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -14,10 +15,12 @@ import org.springframework.stereotype.Service;
 public class BondInterestPaymentsService implements GenericService<BondInterestPaymentsResponse> {
     private final MabnaConf mabnaConf;
     private final ObjectMapper objectMapper;
+    private final ModelMapper modelMapper;
 
-    public BondInterestPaymentsService(MabnaConf mabnaConf, ObjectMapper objectMapper) {
+    public BondInterestPaymentsService(MabnaConf mabnaConf, ObjectMapper objectMapper, ModelMapper modelMapper) {
         this.mabnaConf = mabnaConf;
         this.objectMapper = objectMapper;
+        this.modelMapper = modelMapper;
     }
 
     @Override
