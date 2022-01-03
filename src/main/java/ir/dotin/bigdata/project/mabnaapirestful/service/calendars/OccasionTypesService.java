@@ -19,11 +19,11 @@ import java.util.Objects;
 @Service
 public class OccasionTypesService implements GenericService {
     private final MabnaConf mabnaConf;
-    private final OccasionTypesRepository occasionTypesRepository;
+    private final OccasionTypesRepository repository;
 
-    public OccasionTypesService(MabnaConf mabnaConf, OccasionTypesRepository occasionTypesRepository) {
+    public OccasionTypesService(MabnaConf mabnaConf, OccasionTypesRepository repository) {
         this.mabnaConf = mabnaConf;
-        this.occasionTypesRepository = occasionTypesRepository;
+        this.repository = repository;
     }
 
     @Override
@@ -34,9 +34,9 @@ public class OccasionTypesService implements GenericService {
             String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
             response = mabnaConf.getResponse("/calendar/occasiontypes",filter, HttpMethod.GET, OccasionTypesResponse.class);
 
-            Objects.requireNonNull(response.getBody()).getData().forEach(occasionTypesInner -> {
-                        OccasionTypesModel occasionTypesModel = OccasionTypesMapper.map(occasionTypesInner);
-                        occasionTypesRepository.save(occasionTypesModel);
+            Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
+                        OccasionTypesModel model = OccasionTypesMapper.map(responseInner);
+                        repository.save(model);
                     }
             );
             skip += 100;

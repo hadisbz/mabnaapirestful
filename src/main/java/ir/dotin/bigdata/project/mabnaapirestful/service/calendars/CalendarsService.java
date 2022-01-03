@@ -17,11 +17,11 @@ import java.util.Objects;
 @Service
 public class CalendarsService implements GenericService {
     private final MabnaConf mabnaConf;
-    private final CalendarsRepository calendarsRepository;
+    private final CalendarsRepository repository;
 
-    public CalendarsService(MabnaConf mabnaConf, CalendarsRepository calendarsRepository) {
+    public CalendarsService(MabnaConf mabnaConf, CalendarsRepository repository) {
         this.mabnaConf = mabnaConf;
-        this.calendarsRepository = calendarsRepository;
+        this.repository = repository;
     }
 
     @Override
@@ -32,9 +32,9 @@ public class CalendarsService implements GenericService {
             String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
             response = mabnaConf.getResponse("/calendar/calendars", filter, HttpMethod.GET, CalendarsResponse.class);
 
-            Objects.requireNonNull(response.getBody()).getData().forEach(calendarsResponseInner -> {
-                        CalendarsModel calendarsModel = CalendarsMapper.map(calendarsResponseInner);
-                        calendarsRepository.save(calendarsModel);
+            Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
+                        CalendarsModel model = CalendarsMapper.map(responseInner);
+                        repository.save(model);
                     }
             );
             skip += 100;

@@ -19,11 +19,11 @@ import java.util.Objects;
 @Service
 public class DatesService implements GenericService {
     private final MabnaConf mabnaConf;
-    private final DatesRepository datesRepository;
+    private final DatesRepository repository;
 
-    public DatesService(MabnaConf mabnaConf, DatesRepository datesRepository) {
+    public DatesService(MabnaConf mabnaConf, DatesRepository repository) {
         this.mabnaConf = mabnaConf;
-        this.datesRepository = datesRepository;
+        this.repository = repository;
     }
 
     @Override
@@ -34,9 +34,9 @@ public class DatesService implements GenericService {
             String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
             response = mabnaConf.getResponse("/calendar/dates", filter, HttpMethod.GET, DatesResponse.class);
 
-            Objects.requireNonNull(response.getBody()).getData().forEach(datesResponseInner -> {
-                        DatesModel datesModel = DatesMapper.map(datesResponseInner);
-                        datesRepository.save(datesModel);
+            Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
+                        DatesModel model = DatesMapper.map(responseInner);
+                        repository.save(model);
                     }
             );
             skip += 100;
