@@ -1,34 +1,36 @@
 package ir.dotin.bigdata.project.mabnaapirestful;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.modelmapper.ModelMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.OccasionTypesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.CalendarsService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.DatesService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.OccasionTypesService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class MabnaapirestfulApplication {
+public class MabnaapirestfulApplication implements CommandLineRunner {
+
+    @Autowired
+    private CalendarsService calendarsService;
+
+    @Autowired
+    private DatesService datesService;
+
+    @Autowired
+    private OccasionTypesService occasionTypesService;
+
+
 
     public static void main(String[] args) {
-        SpringApplication.run(MabnaapirestfulApplication.class, args);
+        SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
 
-
-    @Bean
-    public RestTemplate getRestTemplate() {
-        return new RestTemplate();
-    }
-
-    @Bean
-    public ObjectMapper getObjectMapper() {
-        return new ObjectMapper();
-    }
-
-    @Bean
-    public ModelMapper getModelMapper(){
-        return new ModelMapper();
+    @Override
+    public void run(String... args) throws Exception {
+        calendarsService.save();
+        datesService.save();
+        occasionTypesService.save();
     }
 }

@@ -2,23 +2,35 @@ package ir.dotin.bigdata.project.mabnaapirestful.api.response.bonds;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.OccasionTypesResponse;
 import lombok.Getter;
+import lombok.ToString;
+
+import java.util.List;
 
 @Getter
+@ToString
 public class BondInterestPaymentsResponse {
-    @JsonProperty("bond")
-    private BondResponse bondResponse;
+    @JsonProperty("data")
+    private List<BondInterestPaymentsResponseInner> data;
 
-    @JsonProperty("start_date")
-    private String startDate;
+    @Getter
+    @ToString
+    public static class BondInterestPaymentsResponseInner {
+        @JsonProperty("bond")
+        private BondResponse bondResponse;
 
-    @JsonProperty("end_date")
-    private String endDate;
+        @JsonProperty("start_date")
+        private String startDate;
 
-    private Double interest;
+        @JsonProperty("end_date")
+        private String endDate;
 
-    private String id;
+        private Double interest;
 
-    @JsonProperty("meta")
-    private MetaResponse metaResponse;
+        private String id;
+
+        @JsonProperty("meta")
+        private MetaResponse metaResponse;
+    }
 }

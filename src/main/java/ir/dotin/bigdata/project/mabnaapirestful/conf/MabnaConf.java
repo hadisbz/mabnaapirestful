@@ -13,28 +13,29 @@ import java.nio.charset.StandardCharsets;
 
 @Configuration
 public class MabnaConf {
-    @Value("${mabna-url}")
-    private String url;
+    @Value("${mabna-uri}")
+    private String uri;
 
     @Value("${mabna-auth}")
     private String auth;
 
-    private final RestTemplate restTemplate;
+    private final RestTemplate restTemplate = new RestTemplate();
 
-    public MabnaConf(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
+    public<T> ResponseEntity<T> getResponse(String path, String filter, HttpMethod httpMethod, Class<T> clazz) {
+        StringBuilder finalURI = new StringBuilder(uri.concat(path));
 
-    public ResponseEntity<String> getResponse(String path, HttpMethod httpMethod) {
+        if(filter != null && !filter.isEmpty())
+            finalURI.append("?").append(filter);
+
         return restTemplate.exchange(
-                url.concat(path),
+                finalURI.toString(),
                 httpMethod,
                 new HttpEntity<>(new HttpHeaders() {{
                     byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.US_ASCII));
                     String authHeader = "Basic " + new String(encodedAuth);
                     set("Authorization", authHeader);
                 }}),
-                String.class
+                clazz
         );
     }
 }

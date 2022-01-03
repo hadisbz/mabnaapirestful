@@ -1,30 +1,45 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.calendars;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.Root;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.calenders.DatesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.DatesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.OccasionTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.calendars.DatesMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.model.calendars.DatesModel;
+import ir.dotin.bigdata.project.mabnaapirestful.model.calendars.OccasionTypesModel;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.calendars.DatesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
+import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 @Service
-
-public class DatesService implements GenericService<DatesResponse> {
+public class DatesService implements GenericService {
     private final MabnaConf mabnaConf;
-    private final ObjectMapper objectMapper;
+    private final DatesRepository datesRepository;
 
-    public DatesService(MabnaConf mabnaConf, ObjectMapper objectMapper) {
+    public DatesService(MabnaConf mabnaConf, DatesRepository datesRepository) {
         this.mabnaConf = mabnaConf;
-        this.objectMapper = objectMapper;
+        this.datesRepository = datesRepository;
     }
 
-
     @Override
-    public Root<DatesResponse> response() throws JsonProcessingException {
-        ResponseEntity<String> response = mabnaConf.getResponse("/calendar/dates", HttpMethod.GET);
+    public void save() throws JsonProcessingException {
+        ResponseEntity<DatesResponse> response;
+        int skip = 0;
+        do {
+            String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
+            response = mabnaConf.getResponse("/calendar/dates", filter, HttpMethod.GET, DatesResponse.class);
 
-        return objectMapper.readValue(response.getBody(), Root.class);
+            Objects.requireNonNull(response.getBody()).getData().forEach(datesResponseInner -> {
+                        DatesModel datesModel = DatesMapper.map(datesResponseInner);
+                        datesRepository.save(datesModel);
+                    }
+            );
+            skip += 100;
+        } while (!response.getBody().getData().isEmpty());
     }
 }
