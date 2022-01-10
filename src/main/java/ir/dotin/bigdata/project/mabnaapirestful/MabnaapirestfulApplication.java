@@ -1,13 +1,11 @@
 package ir.dotin.bigdata.project.mabnaapirestful;
 
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.OccasionTypesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.PercentageDealerTypesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.CalendarsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.DatesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.OccasionTypesService;
-import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.MarketMessagesService;
-import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.PercentageActionTypesService;
-import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.ReportSourcesService;
-import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.SourcesService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -37,6 +35,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     PercentageActionTypesService percentageActionTypesService;
 
+    @Autowired
+    PercentageDealerTypesService percentageDealerTypesService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -49,6 +50,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        sourcesService.save();
 //        reportSourcesService.save();
 //        marketMessagesService.save();
-        percentageActionTypesService.save();
+//        percentageActionTypesService.save();
+//        percentageDealerTypesService.save();
     }
 }
