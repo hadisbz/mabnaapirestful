@@ -5,6 +5,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.CalendarsServi
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.DatesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.OccasionTypesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.MarketMessagesService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.PercentageActionTypesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.ReportSourcesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.SourcesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private MarketMessagesService marketMessagesService;
 
+    @Autowired
+    PercentageActionTypesService percentageActionTypesService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -44,6 +48,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        occasionTypesService.save();
 //        sourcesService.save();
 //        reportSourcesService.save();
-        marketMessagesService.save();
+//        marketMessagesService.save();
+        percentageActionTypesService.save();
     }
 }
