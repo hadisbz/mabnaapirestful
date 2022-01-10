@@ -9,11 +9,11 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(schema = "public", name = "sources")
+@Table(schema = "public", name = "market_messages")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SourcesModel {
+public class MarketMessagesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "local_id")
@@ -21,10 +21,12 @@ public class SourcesModel {
 
     private String id;
 
+    @Column(name = "date_time")
+    private String dateTime;
+
     private String title;
 
-    @Column(name = "english_title")
-    private String englishTitle;
+    private String text;
 
     @Embedded
     private MetaModel meta;
