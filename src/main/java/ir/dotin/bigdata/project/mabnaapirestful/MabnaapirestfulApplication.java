@@ -4,6 +4,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.OccasionT
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.CalendarsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.DatesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.OccasionTypesService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.SourcesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,6 +22,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private OccasionTypesService occasionTypesService;
 
+    @Autowired
+    private SourcesService sourcesService;
 
 
     public static void main(String[] args) {
@@ -29,8 +32,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        calendarsService.save();
-        datesService.save();
-        occasionTypesService.save();
+//        calendarsService.save();
+//        datesService.save();
+//        occasionTypesService.save();
+//        sourcesService.save();
     }
 }
