@@ -33,10 +33,13 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     private MarketMessagesService marketMessagesService;
 
     @Autowired
-    PercentageActionTypesService percentageActionTypesService;
+    private PercentageActionTypesService percentageActionTypesService;
 
     @Autowired
-    PercentageDealerTypesService percentageDealerTypesService;
+    private PercentageDealerTypesService percentageDealerTypesService;
+
+    @Autowired
+    private PercentagesService percentagesService;
 
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
@@ -52,5 +55,6 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        marketMessagesService.save();
 //        percentageActionTypesService.save();
 //        percentageDealerTypesService.save();
+        percentagesService.save();
     }
 }
