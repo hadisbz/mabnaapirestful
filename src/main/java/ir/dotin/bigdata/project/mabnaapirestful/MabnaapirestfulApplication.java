@@ -92,10 +92,22 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private CompanyContactInfoTypesService companyContactInfoTypesService;
 
+    @Autowired
+    private MeetingTypesService meetingTypesService;
+
+    @Autowired
+    private ProductsService productsService;
+
+    @Autowired
+    private DirectorTypesService directorTypesService;
+
 
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
+
+    @Autowired
+    private PositionsService positionsService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -123,7 +135,11 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        personsService.save(); //Error: gender_type is not string
 //        reportSubTitlesService.save();
 //        reportTitlesService.save();
-        companyContactInfoTypesService.save();
+//        companyContactInfoTypesService.save();
+ //       meetingTypesService.save();
+        //productsService.save();
+        //directorTypesService.save();
+        positionsService.save();
 
     }
 }
