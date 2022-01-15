@@ -29,7 +29,7 @@ public class ContractStylesService implements GenericService {
         int skip = 0;
         do {
             String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
-            response = mabnaConf.getResponse("/option/contracttypes", filter, HttpMethod.GET, ContractStylesResponse.class);
+            response = mabnaConf.getResponse("/option/contractstyles", filter, HttpMethod.GET, ContractStylesResponse.class);
 
             Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
                         ContractStylesModel model = ContractStylesMapper.map(responseInner);

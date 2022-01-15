@@ -33,7 +33,6 @@ public class PersonsResponse {
         @JsonProperty("father_name")
         private String fatherName;
 
-
         @JsonProperty("english_father_name")
         private String englishFatherName;
 
