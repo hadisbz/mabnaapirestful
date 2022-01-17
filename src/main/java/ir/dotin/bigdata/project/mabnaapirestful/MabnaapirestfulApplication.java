@@ -101,16 +101,28 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private DirectorTypesService directorTypesService;
 
+
+    @Autowired
+    private PositionsService positionsService;
+
     @Autowired
     private NewsService newsService;
+
+    @Autowired
+    private BalancesheetFieldsService balancesheetFieldsService;
+
+    @Autowired
+    private CashflowFieldsService cashflowFieldsService;
+
+    @Autowired
+    private ProfitlossFieldsService profitlossFieldsService;
 
 
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
 
-    @Autowired
-    private PositionsService positionsService;
+
 
     @Override
     public void run(String... args) throws Exception {
@@ -143,6 +155,10 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
         //productsService.save();
         //directorTypesService.save();
         //positionsService.save();
-        newsService.save();
+//        newsService.save();
+        balancesheetFieldsService.save();
+        cashflowFieldsService.save();
+        profitlossFieldsService.save();
+
     }
 }
