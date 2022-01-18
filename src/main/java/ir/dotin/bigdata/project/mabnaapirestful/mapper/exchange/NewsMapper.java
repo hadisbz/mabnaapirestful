@@ -8,16 +8,20 @@ public class NewsMapper {
     public static NewsModel map(NewsResponse.NewsResponseInner newsResponse) {
         String entityId = null;
         String entityType = null;
+        String sourceId = null;
 
         if (newsResponse.getEntity() != null) {
             entityId = newsResponse.getEntity().getId();
             entityType = newsResponse.getEntity().getMetaResponse().getType();
         }
 
+        if(newsResponse.getSource() != null)
+            sourceId = newsResponse.getSource().getId();
+
         return new NewsModel(
                 null,
                 newsResponse.getId(),
-                newsResponse.getSource().getId(),
+                sourceId,
                 entityId,
                 entityType,
                 newsResponse.getDate(),

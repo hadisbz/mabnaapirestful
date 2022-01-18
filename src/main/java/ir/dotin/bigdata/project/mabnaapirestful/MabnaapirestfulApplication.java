@@ -2,6 +2,7 @@ package ir.dotin.bigdata.project.mabnaapirestful;
 
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.OccasionTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.PercentageDealerTypesModel;
+import ir.dotin.bigdata.project.mabnaapirestful.service.bonds.BondAuthorityTypesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.CalendarsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.DatesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.OccasionTypesService;
@@ -117,6 +118,11 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private ProfitlossFieldsService profitlossFieldsService;
 
+    @Autowired
+    private BondAuthorityTypesService bondAuthorityTypesService;
+
+    @Autowired
+    private IndexTradeSummariesService indexTradeSummariesService;
 
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
@@ -137,7 +143,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        percentagesService.save();
 //        instrumentGroupService.save();
 //        contractStylesService.save();
-//       contractTypesService.save();
+//        contractTypesService.save();
 //        assetStatesService.save();
 //        assetTypesService.save();
 //        boardsService.save();
@@ -145,20 +151,22 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        genderTypesService.save();
 //        indexesService.save();
 //        instrumentExchangeStatesService.save()
-//     instrumentGroupStateTypesService.save();
-//     marketsService.save();
+//        instrumentGroupStateTypesService.save();
+//        marketsService.save();
 //        personsService.save(); //Error: gender_type is not string
 //        reportSubTitlesService.save();
 //        reportTitlesService.save();
 //        companyContactInfoTypesService.save();
- //       meetingTypesService.save();
-        //productsService.save();
-        //directorTypesService.save();
-        //positionsService.save();
-//        newsService.save();
-        balancesheetFieldsService.save();
-        cashflowFieldsService.save();
-        profitlossFieldsService.save();
+//        meetingTypesService.save();
+//        productsService.save();
+//        directorTypesService.save();
+//        positionsService.save();
+        newsService.save();
+//        balancesheetFieldsService.save();
+//        cashflowFieldsService.save();
+//        profitlossFieldsService.save();
+//        bondAuthorityTypesService.save();
+//        indexTradeSummariesService.save();
 
     }
 }
