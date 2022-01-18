@@ -2,6 +2,7 @@ package ir.dotin.bigdata.project.mabnaapirestful;
 
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.OccasionTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.PercentageDealerTypesModel;
+import ir.dotin.bigdata.project.mabnaapirestful.service.TestService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.bonds.BondAuthorityTypesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.CalendarsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.DatesService;
@@ -124,6 +125,10 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private IndexTradeSummariesService indexTradeSummariesService;
 
+    @Autowired
+    private IndexIntradayTradeSummariesService indexIntradayTradeSummariesService;
+
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -161,12 +166,13 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        productsService.save();
 //        directorTypesService.save();
 //        positionsService.save();
-        newsService.save();
+//        newsService.save();
 //        balancesheetFieldsService.save();
 //        cashflowFieldsService.save();
 //        profitlossFieldsService.save();
 //        bondAuthorityTypesService.save();
 //        indexTradeSummariesService.save();
+        indexIntradayTradeSummariesService.save();
 
     }
 }
