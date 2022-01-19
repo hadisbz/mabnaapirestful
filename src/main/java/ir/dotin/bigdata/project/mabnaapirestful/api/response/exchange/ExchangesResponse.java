@@ -11,7 +11,7 @@ import java.util.List;
 @ToString
 public class ExchangesResponse {
     @JsonProperty("data")
-    private List<ExchangesResponse.ExchangesResponseInner> data;
+    private List<ExchangesResponseInner> data;
 
     @Getter
     @ToString

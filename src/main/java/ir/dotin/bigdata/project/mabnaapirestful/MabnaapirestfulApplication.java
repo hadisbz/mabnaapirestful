@@ -138,6 +138,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private IndexIntradayValuesService indexIntradayValuesService;
 
+    @Autowired
+    private CompaniesService companiesService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -181,10 +184,11 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        profitlossFieldsService.save();
 //        bondAuthorityTypesService.save();
 //        indexTradeSummariesService.save();
-        indexIntradayTradeSummariesService.save();
-        indexValuesService.save();
-        mortgageLoansService.save();
-        indexIntradayValuesService.save();
+//        indexIntradayTradeSummariesService.save();
+//        indexValuesService.save();
+//        mortgageLoansService.save();
+//        indexIntradayValuesService.save();
+        companiesService.save();
 
     }
 }
