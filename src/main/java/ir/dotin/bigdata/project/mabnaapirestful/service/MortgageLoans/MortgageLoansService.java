@@ -1,11 +1,11 @@
-package ir.dotin.bigdata.project.mabnaapirestful.service.exchange;
+package ir.dotin.bigdata.project.mabnaapirestful.service.MortgageLoans;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.IndexTradeSummariesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.IndexTradeSummariesMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.IndexTradeSummariesModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.exchange.IndexTradeSummariesRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.mortgageLoans.MortgageLoansResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.MortgageLoans.MortgageloansMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.model.mortgageLoans.MortgageLoansModel;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.mortgageLoans.MortgageLoansRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
@@ -15,25 +15,25 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-public class IndexTradeSummariesService implements GenericService {
+public class MortgageLoansService implements GenericService {
     private final MabnaConf mabnaConf;
-    private final IndexTradeSummariesRepository repository;
+    private final MortgageLoansRepository repository;
 
-    public   IndexTradeSummariesService(MabnaConf mabnaConf, IndexTradeSummariesRepository repository) {
+    public   MortgageLoansService(MabnaConf mabnaConf, MortgageLoansRepository repository) {
         this.mabnaConf = mabnaConf;
         this.repository = repository;
     }
 
     @Override
     public void save() throws JsonProcessingException {
-        ResponseEntity<IndexTradeSummariesResponse> response;
+        ResponseEntity<MortgageLoansResponse> response;
         int skip = 0;
         do {
             String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
-            response = mabnaConf.getResponse("/exchange/indextradesummaries", filter, HttpMethod.GET,   IndexTradeSummariesResponse.class);
+            response = mabnaConf.getResponse("/mortgageloan/mortgageloans", filter, HttpMethod.GET,   MortgageLoansResponse.class);
 
             Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
-                          IndexTradeSummariesModel model =  IndexTradeSummariesMapper.map(responseInner);
+                MortgageLoansModel model =  MortgageloansMapper.map(responseInner);
                         repository.save(model);
                     }
             );
