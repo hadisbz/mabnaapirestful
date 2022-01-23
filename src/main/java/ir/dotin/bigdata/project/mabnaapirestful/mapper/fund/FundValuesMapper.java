@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.fund;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.fund.FundValuesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.api.response.fund.FundValuesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.fund.FundValuesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 

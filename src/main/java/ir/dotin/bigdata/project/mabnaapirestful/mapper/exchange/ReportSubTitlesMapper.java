@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.ReportSubTitlesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.api.response.exchange.ReportSubTitlesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.ReportSubTitlesModel;
 

@@ -1,17 +1,11 @@
 package ir.dotin.bigdata.project.mabnaapirestful.model.stock;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.ReportsResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.CompaniesResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.MeetingTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(schema = "public", name = "meetings")

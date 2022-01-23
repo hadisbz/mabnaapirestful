@@ -1,8 +1,5 @@
 package ir.dotin.bigdata.project.mabnaapirestful.model.fund;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.EntityResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.fund.FundsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;

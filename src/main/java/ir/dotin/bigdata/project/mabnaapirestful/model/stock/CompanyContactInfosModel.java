@@ -1,15 +1,11 @@
 package ir.dotin.bigdata.project.mabnaapirestful.model.stock;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.CompaniesResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.CompanyContactInfoTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(schema = "public", name = "company_contact_infos")

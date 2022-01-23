@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.stock;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.MeetingTypesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.api.response.stock.MeetingTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.MeetingTypesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.MeetingTypesModel;

@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.calendars;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.CalendarsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.api.response.calendars.CalendarsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.calendars.CalendarsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.calendars.CalendarsModel;
