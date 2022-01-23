@@ -1,7 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.OccasionTypesResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.PercentageDealerTypesModel;
+import ir.dotin.bigdata.project.mabnaapirestful.service.broker.BrokersService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.MortgageLoans.MortgageLoansService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.TestService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.bonds.BondAuthorityTypesService;
@@ -12,6 +11,10 @@ import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractStyles
 import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractTypesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.*;
+import ir.dotin.bigdata.project.mabnaapirestful.service.fund.DividendPaymentsService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.fund.FundValuesService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.fund.FundsService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.fund.RatingsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.stock.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -148,6 +151,30 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private TestService testService;
 
+    @Autowired
+    private FundsService fundsService;
+
+    @Autowired
+    private CategoriesService categoriesService;
+
+    @Autowired
+    private ReportsService reportsService;
+
+    @Autowired
+    private BrokersService brokersService;
+
+    @Autowired
+    private FundValuesService fundValuesService;
+
+    @Autowired
+    private RatingsService ratingsService;
+
+    @Autowired
+    private DividendPaymentsService dividendPaymentsService;
+
+    @Autowired
+    private CompanyContactInfosService companyContactInfosService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -174,13 +201,13 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        exchangesService.save();
 //        genderTypesService.save();
 //        indexesService.save();
-//        instrumentExchangeStatesService.save()
+//        instrumentExchangeStatesService.save();
 //        instrumentGroupStateTypesService.save();
 //        marketsService.save();
 //        personsService.save(); //Error: gender_type is not string
 //        reportSubTitlesService.save();
 //        reportTitlesService.save();
-//        companyContactInfoTypesService.save();
+ //      companyContactInfoTypesService.save();
 //        meetingTypesService.save();
 //        productsService.save();
 //        directorTypesService.save();
@@ -196,7 +223,16 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        mortgageLoansService.save();
 //        indexIntradayValuesService.save();
 //       companiesService.save();
- //       contractsService.save();
+  //      contractsService.save();
+  //      fundsService.save();
+ //       categoriesService.save();
+  //      reportsService.save();
+  //      brokersService.save();
+
         testService.test();
+ //       fundValuesService.save();
+  //      ratingsService.save();
+ //       dividendPaymentsService.save();
+  //    companyContactInfosService.save();
     }
 }
