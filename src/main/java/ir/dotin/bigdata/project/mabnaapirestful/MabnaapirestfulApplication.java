@@ -175,6 +175,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private CompanyContactInfosService companyContactInfosService;
 
+    @Autowired
+    private MeetingsService meetingsService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -226,7 +229,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //       companiesService.save();
   //      contractsService.save();
 //        fundsService.save();
-        categoriesService.save();
+ //       categoriesService.save();
   //      reportsService.save();
   //      brokersService.save();
 
@@ -235,6 +238,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        ratingsService.save();
  //       dividendPaymentsService.save();
  //       companyContactInfosService.save();
+        meetingsService.save();
 
     }
 }
