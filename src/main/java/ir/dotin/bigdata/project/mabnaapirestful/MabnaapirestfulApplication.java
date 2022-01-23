@@ -183,6 +183,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        testService.test();
 //        calendarsService.save();
 //        datesService.save();
 //        occasionTypesService.save();
@@ -225,15 +226,15 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //       companiesService.save();
   //      contractsService.save();
 //        fundsService.save();
- //       categoriesService.save();
+        categoriesService.save();
   //      reportsService.save();
   //      brokersService.save();
 
-        testService.test();
+
   //      fundValuesService.save();
 //        ratingsService.save();
  //       dividendPaymentsService.save();
-        companyContactInfosService.save();
+ //       companyContactInfosService.save();
 
     }
 }
