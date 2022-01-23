@@ -224,10 +224,10 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        indexIntradayValuesService.save();
 //       companiesService.save();
   //      contractsService.save();
-        fundsService.save();
+//        fundsService.save();
  //       categoriesService.save();
   //      reportsService.save();
-  //      brokersService.save();
+        brokersService.save();
 
         testService.test();
  //       fundValuesService.save();
