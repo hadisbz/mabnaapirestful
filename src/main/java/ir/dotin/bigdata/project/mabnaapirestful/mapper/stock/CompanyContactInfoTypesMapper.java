@@ -5,12 +5,13 @@ import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.CompanyContactInfoTypesModel;
 
 public class CompanyContactInfoTypesMapper {
-    public static CompanyContactInfoTypesModel map(CompanyContactInfoTypesResponse.CompanyContactInfoTypesResponseInner CompanyContactInfoTypesResponseInner){
+    public static CompanyContactInfoTypesModel map(CompanyContactInfoTypesResponse.CompanyContactInfoTypesResponseInner companyContactInfoTypesResponseInner){
         return new CompanyContactInfoTypesModel(
                 null,
-                CompanyContactInfoTypesResponseInner.getTitle(),
-                CompanyContactInfoTypesResponseInner.getEnglishTitle(),
-                MetaMapper.map(CompanyContactInfoTypesResponseInner.getMetaResponse())
+                companyContactInfoTypesResponseInner.getId(),
+                companyContactInfoTypesResponseInner.getTitle(),
+                companyContactInfoTypesResponseInner.getEnglishTitle(),
+                MetaMapper.map(companyContactInfoTypesResponseInner.getMetaResponse())
         );
     }
 }

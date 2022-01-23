@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.EntityResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.ExchangesResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.IndexesResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.InstrumentExchangeStatesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.CompaniesResponse;
 import lombok.Getter;
 import lombok.ToString;

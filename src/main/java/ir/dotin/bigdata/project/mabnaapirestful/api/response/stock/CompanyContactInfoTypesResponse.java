@@ -18,6 +18,7 @@ public class CompanyContactInfoTypesResponse {
     @ToString
     public static class CompanyContactInfoTypesResponseInner {
 
+        private String id;
 
         private String title;
 

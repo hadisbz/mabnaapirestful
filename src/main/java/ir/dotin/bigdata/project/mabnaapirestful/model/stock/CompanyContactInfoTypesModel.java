@@ -20,6 +20,8 @@ public class CompanyContactInfoTypesModel {
     @Column(name = "local_id")
     private Long localId;
 
+    private String id;
+
     private String title;
 
     @Column(name = "english_title")
