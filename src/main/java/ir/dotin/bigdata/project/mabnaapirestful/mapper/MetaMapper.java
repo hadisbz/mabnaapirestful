@@ -10,7 +10,7 @@ public class MetaMapper {
                 metaResponse.getVersion(),
                 metaResponse.getState(),
                 metaResponse.getInsertDateTime(),
-                metaResponse.getInsertDateTime(),
+                metaResponse.getUpdateDateTime(),
                 metaResponse.getDeleteDateTime()
         );
     }
