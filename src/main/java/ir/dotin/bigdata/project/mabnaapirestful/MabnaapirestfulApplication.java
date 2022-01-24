@@ -187,6 +187,15 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private ShareHoldersService shareHoldersService;
 
+    @Autowired
+    private InstrumentsService instrumentsService;
+
+    @Autowired
+    private PercentageGroupsService percentageGroupsService;
+
+    @Autowired
+    private BoardOfDirectorsService boardOfDirectorsService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -241,8 +250,6 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
  //       categoriesService.save();
   //      reportsService.save();
   //      brokersService.save();
-
-
   //      fundValuesService.save();
 //        ratingsService.save();
  //       dividendPaymentsService.save();
@@ -250,7 +257,10 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        meetingsService.save();
 //        companyCategoriesService.save();
 //        freeFloatsService.save();
-        shareHoldersService.save();
+//        shareHoldersService.save();
+//        instrumentsService.save();
+//        percentageGroupsService.save();
+        boardOfDirectorsService.save();
 
     }
 }
