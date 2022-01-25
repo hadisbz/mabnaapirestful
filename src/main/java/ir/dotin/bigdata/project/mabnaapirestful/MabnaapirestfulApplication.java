@@ -204,6 +204,12 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
     @Autowired TradesService tradesService;
 
+    @Autowired
+    private InstrumentBaseVolumesService instrumentBaseVolumesService;
+
+    @Autowired
+    private InstrumentStaticThresholdsService instrumentStaticThresholdsService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -237,7 +243,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        personsService.save(); //Error: gender_type is not string
 //        reportSubTitlesService.save();
 //        reportTitlesService.save();
- //      companyContactInfoTypesService.save();
+//        companyContactInfoTypesService.save();
 //        meetingTypesService.save();
 //        productsService.save();
 //        directorTypesService.save();
@@ -252,16 +258,16 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        indexValuesService.save();
 //        mortgageLoansService.save();
 //        indexIntradayValuesService.save();
-//       companiesService.save();
-  //      contractsService.save();
+//        companiesService.save();
+//        contractsService.save();
 //        fundsService.save();
- //       categoriesService.save();
-  //      reportsService.save();
-  //      brokersService.save();
-  //      fundValuesService.save();
+//        categoriesService.save();
+//        reportsService.save();
+//        brokersService.save();
+//        fundValuesService.save();
 //        ratingsService.save();
- //       dividendPaymentsService.save();
- //       companyContactInfosService.save();
+//        dividendPaymentsService.save()
+//        companyContactInfosService.save();
 //        meetingsService.save();
 //        companyCategoriesService.save();
 //        freeFloatsService.save();
@@ -271,7 +277,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        boardOfDirectorsService.save();
 //        dividendPayoutsService.save();
 //        indexInstrumentEffectsService.save();
-        tradesService.save();
+//        tradesService.save();
+//        instrumentBaseVolumesService.save();
+        instrumentStaticThresholdsService.save();
 
 
     }
