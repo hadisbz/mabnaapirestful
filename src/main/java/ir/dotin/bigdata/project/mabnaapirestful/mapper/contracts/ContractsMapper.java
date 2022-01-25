@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.contracts;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.api.response.contracts.ContractsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.contracts.ContractsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.contracts.ContractsModel;
 

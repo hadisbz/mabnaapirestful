@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.calendars;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.api.response.calendars.CalendarsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.CalendarsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.calendars.CalendarsModel;
 
