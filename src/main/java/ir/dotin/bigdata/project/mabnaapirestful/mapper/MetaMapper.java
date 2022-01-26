@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.api.response.MetaResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 
 public class MetaMapper {

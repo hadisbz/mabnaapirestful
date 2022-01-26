@@ -1,8 +1,8 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.api.response.exchange.IndexValuesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.IndexValuesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.exchange. IndexValuesModel;
+import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.IndexValuesModel;
 
 public class IndexValuesMapper {
     public static  IndexValuesModel map( IndexValuesResponse. IndexValuesResponseInner  indexValuesResponseInner) {

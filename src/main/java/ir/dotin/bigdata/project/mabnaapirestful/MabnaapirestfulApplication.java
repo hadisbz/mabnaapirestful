@@ -272,14 +272,14 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        companyCategoriesService.save();
 //        freeFloatsService.save();
 //        shareHoldersService.save();
-//        instrumentsService.save();
+        instrumentsService.save();
 //        percentageGroupsService.save();
 //        boardOfDirectorsService.save();
 //        dividendPayoutsService.save();
 //        indexInstrumentEffectsService.save();
 //        tradesService.save();
 //        instrumentBaseVolumesService.save();
-        instrumentStaticThresholdsService.save();
+//        instrumentStaticThresholdsService.save();
 
 
     }

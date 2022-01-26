@@ -1,8 +1,8 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.api.response.exchange.IndexIntradayValuesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.IndexIntradayValuesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.exchange. IndexIntradayValuesModel;
+import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.IndexIntradayValuesModel;
 
 public class IndexIntradayValuesMapper {
     public static  IndexIntradayValuesModel map( IndexIntradayValuesResponse. IndexIntradayValuesResponseInner  indexIntradayValuesResponseInner) {

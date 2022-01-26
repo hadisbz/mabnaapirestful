@@ -1,8 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.EntityResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.AssetStatesResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.NewsResponse;
+
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +15,7 @@ public class TestService {
     }
 
     public void test(){
-        ResponseEntity<String> response = mabnaConf.getResponse("/exchange/news", null, HttpMethod.GET, String.class);
+        ResponseEntity<String> response = mabnaConf.getResponse("/exchange/instruments?_count=1", null, HttpMethod.GET, String.class);
         System.out.println(response.getBody());
     }
 }
