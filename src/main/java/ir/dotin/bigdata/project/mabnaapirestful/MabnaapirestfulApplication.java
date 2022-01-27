@@ -210,6 +210,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private InstrumentStaticThresholdsService instrumentStaticThresholdsService;
 
+    @Autowired
+    private AssetsService assetsService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -219,6 +222,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         testService.test();
+
 //        calendarsService.save();
 //        datesService.save();
 //        occasionTypesService.save();
@@ -272,7 +276,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        companyCategoriesService.save();
 //        freeFloatsService.save();
 //        shareHoldersService.save();
-        instrumentsService.save();
+        //instrumentsService.save();
 //        percentageGroupsService.save();
 //        boardOfDirectorsService.save();
 //        dividendPayoutsService.save();
@@ -280,6 +284,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        tradesService.save();
 //        instrumentBaseVolumesService.save();
 //        instrumentStaticThresholdsService.save();
+//        assetsService.save();//todo: categories is a list not inserted
 
 
     }
