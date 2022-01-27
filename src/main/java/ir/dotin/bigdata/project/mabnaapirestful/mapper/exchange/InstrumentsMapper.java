@@ -14,6 +14,7 @@ public class InstrumentsMapper {
         String companyId=null;
         String optionContractId=null;
         String indexId = null;
+        String assetId=null;
         String mainInstrumentId=null;
         String mainInstrumenType=null;
         String parentInstrumentId=null;
@@ -43,6 +44,9 @@ public class InstrumentsMapper {
 
         if(instrumentsResponseInner.getIndex()!=null)
             indexId=instrumentsResponseInner.getIndex().getId();
+
+        if(instrumentsResponseInner.getAsset()!=null)
+            assetId=instrumentsResponseInner.getAsset().getId();
 
         if(instrumentsResponseInner.getMainInstrument()!=null) {
             mainInstrumentId = instrumentsResponseInner.getMainInstrument().getId();
@@ -81,6 +85,7 @@ public class InstrumentsMapper {
                 companyId,
                 optionContractId,
                 indexId,
+                assetId,
                 mainInstrumentId,
                 mainInstrumenType,
                 parentInstrumentId,

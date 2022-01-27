@@ -244,7 +244,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        instrumentExchangeStatesService.save();
 //        instrumentGroupStateTypesService.save();
 //        marketsService.save();
-        personsService.save(); //Error: gender_type is not string
+//        personsService.save(); //Error: gender_type is not string
 //        reportSubTitlesService.save();
 //        reportTitlesService.save();
 //        companyContactInfoTypesService.save();
@@ -276,7 +276,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        companyCategoriesService.save();
 //        freeFloatsService.save();
 //        shareHoldersService.save();
-        //instrumentsService.save();
+//        instrumentsService.save();
 //        percentageGroupsService.save();
 //        boardOfDirectorsService.save();
 //        dividendPayoutsService.save();

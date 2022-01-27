@@ -84,6 +84,8 @@ public class InstrumentsResponse {
 
         private IndexesResponse.IndexesResponseInner index;
 
+        private AssetsResponse.AssetsResponseInner asset;
+
         @JsonProperty("main_instrument")
         private ParentResponse mainInstrument;
 

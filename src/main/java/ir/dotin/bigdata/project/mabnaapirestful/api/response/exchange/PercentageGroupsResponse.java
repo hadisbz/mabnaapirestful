@@ -37,6 +37,8 @@ public class PercentageGroupsResponse {
 
         private ExchangesResponse.ExchangesResponseInner exchange;
 
+        private AssetsResponse.AssetsResponseInner asset;
+
         private CategoriesResponse.CategoriesResponseInner category;
 
         @JsonProperty("dealer_type")

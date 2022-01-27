@@ -89,6 +89,9 @@ public class InstrumentsModel {
     @Column(name="index_id")
     private String indexId;
 
+    @Column(name="asset_id")
+    private String assetId;
+
     @Column(name="main_instrument_id")
     private String mainInstrumentId;
 

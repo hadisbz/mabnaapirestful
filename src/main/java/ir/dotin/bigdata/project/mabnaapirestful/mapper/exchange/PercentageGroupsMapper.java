@@ -9,6 +9,7 @@ public class PercentageGroupsMapper {
         String actionTypeId=null;
         String assetTypeId=null;
         String exchangeId=null;
+        String assetId=null;
         String categoryId=null;
         String dealerTypeId=null;
 
@@ -20,6 +21,9 @@ public class PercentageGroupsMapper {
 
         if(percentageGroupsResponseInner.getExchange()!=null)
             exchangeId=percentageGroupsResponseInner.getExchange().getId();
+
+        if(percentageGroupsResponseInner.getAsset()!=null)
+            assetId=percentageGroupsResponseInner.getAsset().getId();
 
         if(percentageGroupsResponseInner.getCategory()!=null)
             categoryId=percentageGroupsResponseInner.getCategory().getId();
@@ -37,6 +41,7 @@ public class PercentageGroupsMapper {
                 actionTypeId,
                 assetTypeId,
                 exchangeId,
+                assetId,
                 categoryId,
                 dealerTypeId,
                 MetaMapper.map(percentageGroupsResponseInner.getMetaResponse())

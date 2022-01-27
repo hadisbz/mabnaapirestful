@@ -42,6 +42,9 @@ public class PercentageGroupsModel {
     @Column(name="exchange_id")
     private String exchangeId;
 
+    @Column(name="asset_id")
+    private String assetId;
+
     @Column(name="category_id")
     private String categoryId;
 
