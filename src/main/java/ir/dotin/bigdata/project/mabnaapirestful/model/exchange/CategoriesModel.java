@@ -23,6 +23,9 @@ public class CategoriesModel {
     @Column(name="parent_id")
     private String parentId;
 
+    @Column(name="parent_type")
+    private String parentType;
+
     private String code;
 
     private String name;

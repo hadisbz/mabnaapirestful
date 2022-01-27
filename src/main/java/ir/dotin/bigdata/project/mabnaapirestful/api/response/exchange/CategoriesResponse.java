@@ -1,6 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.ParentResponse;
 import lombok.Getter;
 import lombok.ToString;
 

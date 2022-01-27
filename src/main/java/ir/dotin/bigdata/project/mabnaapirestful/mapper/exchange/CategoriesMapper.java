@@ -6,12 +6,16 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.CategoriesModel;
 public class CategoriesMapper {
     public static CategoriesModel map(CategoriesResponse.CategoriesResponseInner categoriesResponseInner){
         String parentId = null;
-        if(categoriesResponseInner.getParent() != null)
-            parentId= categoriesResponseInner.getParent().getId();
+        String parentType = null;
+        if(categoriesResponseInner.getParent() != null) {
+            parentId = categoriesResponseInner.getParent().getId();
+            parentType = categoriesResponseInner.getParent().getMetaResponse().getType();
+        }
         return new CategoriesModel(
                 null,
                 categoriesResponseInner.getId(),
                 parentId,
+                parentType,
                 categoriesResponseInner.getCode(),
                 categoriesResponseInner.getName(),
                 categoriesResponseInner.getEnglishName(),
