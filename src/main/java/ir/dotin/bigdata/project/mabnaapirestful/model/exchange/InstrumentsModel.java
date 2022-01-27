@@ -92,8 +92,14 @@ public class InstrumentsModel {
     @Column(name="main_instrument_id")
     private String mainInstrumentId;
 
+    @Column(name="main_instrument_type")
+    private String mainInstrumenType;
+
     @Column(name="parent_instrument_id")
     private String parentInstrumentId;
+
+    @Column(name="parent_instrument_type")
+    private String parentInstrumentType;
 
     @Column(name="listing_date")
     private String listingDate;

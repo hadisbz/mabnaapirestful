@@ -11,7 +11,7 @@ import java.util.List;
 @ToString
 public class PersonsResponse {
     @JsonProperty("data")
-    private List<PersonsResponse.PersonsResponseInner> data;
+    private List<PersonsResponseInner> data;
 
     @Getter
     @ToString
@@ -37,7 +37,7 @@ public class PersonsResponse {
         private String englishFatherName;
 
         @JsonProperty("gender_type")
-        private String genderType;
+        private GenderTypesResponse.GenderTypesResponseInner genderType;
 
         @JsonProperty("birth_date")
         private String birthDate;

@@ -15,7 +15,9 @@ public class InstrumentsMapper {
         String optionContractId=null;
         String indexId = null;
         String mainInstrumentId=null;
+        String mainInstrumenType=null;
         String parentInstrumentId=null;
+        String parentInstrumentType=null;
 
         if(instrumentsResponseInner.getExchange()!=null)
             exchangeId = instrumentsResponseInner.getExchange().getId();
@@ -42,11 +44,15 @@ public class InstrumentsMapper {
         if(instrumentsResponseInner.getIndex()!=null)
             indexId=instrumentsResponseInner.getIndex().getId();
 
-        if(instrumentsResponseInner.getMainInstrument()!=null)
-            mainInstrumentId=instrumentsResponseInner.getMainInstrument().getId();
+        if(instrumentsResponseInner.getMainInstrument()!=null) {
+            mainInstrumentId = instrumentsResponseInner.getMainInstrument().getId();
+            mainInstrumenType= instrumentsResponseInner.getMainInstrument().getMetaResponse().getType();
+        }
 
-        if(instrumentsResponseInner.getParentInstrument()!=null)
-            parentInstrumentId=instrumentsResponseInner.getParentInstrument().getId();
+        if(instrumentsResponseInner.getParentInstrument()!=null) {
+            parentInstrumentId = instrumentsResponseInner.getParentInstrument().getId();
+            parentInstrumentType=instrumentsResponseInner.getParentInstrument().getMetaResponse().getType();
+        }
 
         return new InstrumentsModel(
                 null,
@@ -76,7 +82,9 @@ public class InstrumentsMapper {
                 optionContractId,
                 indexId,
                 mainInstrumentId,
+                mainInstrumenType,
                 parentInstrumentId,
+                parentInstrumentType,
                 instrumentsResponseInner.getListingDate(),
                 instrumentsResponseInner.getShareCount(),
                 MetaMapper.map(instrumentsResponseInner.getMetaResponse())

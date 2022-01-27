@@ -244,7 +244,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        instrumentExchangeStatesService.save();
 //        instrumentGroupStateTypesService.save();
 //        marketsService.save();
-//        personsService.save(); //Error: gender_type is not string
+        personsService.save(); //Error: gender_type is not string
 //        reportSubTitlesService.save();
 //        reportTitlesService.save();
 //        companyContactInfoTypesService.save();

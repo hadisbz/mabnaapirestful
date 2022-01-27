@@ -15,7 +15,7 @@ public class TestService {
     }
 
     public void test(){
-        ResponseEntity<String> response = mabnaConf.getResponse("/exchange/categories", null, HttpMethod.GET, String.class);
+        ResponseEntity<String> response = mabnaConf.getResponse("/exchange/persons?_count=1", null, HttpMethod.GET, String.class);
         System.out.println(response.getBody());
     }
 }

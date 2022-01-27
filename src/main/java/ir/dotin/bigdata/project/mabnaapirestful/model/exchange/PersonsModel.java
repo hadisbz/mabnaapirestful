@@ -38,8 +38,11 @@ public class PersonsModel {
     @Column(name = "english_father_name")
     private String englishFatherName;
 
-    @Column(name = "gender_type")
-    private String genderType;
+    @Column(name = "gender_type_id")
+    private String genderTypeId;
+
+    @Column(name = "gender_type_mata_type")
+    private String genderTypeMetaType;
 
     @Column(name = "birth_date")
     private String birthDate;
