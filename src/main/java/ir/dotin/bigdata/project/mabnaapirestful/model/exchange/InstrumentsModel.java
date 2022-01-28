@@ -15,10 +15,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class InstrumentsModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "local_id")
-    private Long localId;
-    
     private String id;
 
     private String code;

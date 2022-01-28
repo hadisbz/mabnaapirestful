@@ -92,9 +92,6 @@ public class InstrumentsMapper {
                 instrumentsResponseInner.getListingDate(),
                 instrumentsResponseInner.getShareCount(),
                 MetaMapper.map(instrumentsResponseInner.getMetaResponse())
-
-
-
         );
     }
 
