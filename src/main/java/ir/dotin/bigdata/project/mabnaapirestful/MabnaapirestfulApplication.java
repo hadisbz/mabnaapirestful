@@ -237,6 +237,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private ProfitLossesService profitLossesService;
 
+    @Autowired
+    private ReportImagesService reportImagesService;
 
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
@@ -246,9 +248,11 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-       // categoriesService.save();
-        assetsService.save();
-        // testService.test();
+        //reportImagesService.save();
+
+        // categoriesService.save();
+        //assetsService.save();
+        testService.test();
 //profitLossesService.save();
 //        calendarsService.save();
 //        datesService.save();
