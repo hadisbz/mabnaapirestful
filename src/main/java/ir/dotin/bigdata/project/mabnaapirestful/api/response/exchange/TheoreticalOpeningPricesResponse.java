@@ -9,24 +9,23 @@ import java.util.List;
 
 @Getter
 @ToString
-public class AssetTypesResponse {
+public class TheoreticalOpeningPricesResponse {
     @JsonProperty("data")
-    private List<AssetTypesResponseInner> data;
+    private List<TheoreticalOpeningPricesResponseInner> data;
 
     @Getter
     @ToString
-    public static class AssetTypesResponseInner {
+    public static class TheoreticalOpeningPricesResponseInner {
         private String id;
 
-        private String title;
+        private InstrumentsResponse.InstrumentsResponseInner instrument;
 
-        @JsonProperty("english_title")
-        private String englishTitle;
+        @JsonProperty("date_time")
+        private String dateTime;
 
-        private String code;
+        private Integer price;
 
         @JsonProperty("meta")
         private MetaResponse metaResponse;
     }
-
 }

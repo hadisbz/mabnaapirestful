@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-public class FundsService implements GenericService{
+public class FundsService implements GenericService {
     private final MabnaConf mabnaConf;
     private final FundsRepository repository;
 

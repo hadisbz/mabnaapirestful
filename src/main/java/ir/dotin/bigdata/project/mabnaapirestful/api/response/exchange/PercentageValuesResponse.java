@@ -9,24 +9,27 @@ import java.util.List;
 
 @Getter
 @ToString
-public class AssetTypesResponse {
+public class PercentageValuesResponse {
     @JsonProperty("data")
-    private List<AssetTypesResponseInner> data;
+    private List<PercentageValuesResponseInner> data;
 
     @Getter
     @ToString
-    public static class AssetTypesResponseInner {
+    public static class PercentageValuesResponseInner {
         private String id;
 
-        private String title;
+        @JsonProperty("percentage_group")
+        private PercentageGroupsResponse.PercentageGroupsResponseInner percentageGroup;
 
-        @JsonProperty("english_title")
-        private String englishTitle;
+        private PercentagesResponse.PercentagesResponseInner percentage;
 
-        private String code;
+        private Double value;
+
+        private Double min;
+
+        private Double max;
 
         @JsonProperty("meta")
         private MetaResponse metaResponse;
     }
-
 }

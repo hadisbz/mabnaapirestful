@@ -8,16 +8,12 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(schema = "public", name = "instrument_base_volumes")
+@Table(schema = "public", name = "theoretical_opening_prices")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class InstrumentBaseVolumesModel {
+public class TheoreticalOpeningPricesModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "local_id")
-    private Long localId;
-
     private String id;
 
     @Column(name="instrument_id")
@@ -26,10 +22,8 @@ public class InstrumentBaseVolumesModel {
     @Column(name="date_time")
     private String dateTime;
 
-    @Column(name="base_volume")
-    private Integer baseVolume;
+    private Integer price;
 
     @Embedded
     private MetaModel meta;
-
 }

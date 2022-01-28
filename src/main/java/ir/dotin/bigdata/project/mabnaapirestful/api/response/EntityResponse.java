@@ -9,6 +9,11 @@ import lombok.ToString;
 public class EntityResponse {
     private String id;
 
+    private String title;
+
+    @JsonProperty("english_title")
+    private String englishTitle;
+
     @JsonProperty("meta")
     private MetaResponse metaResponse;
 }

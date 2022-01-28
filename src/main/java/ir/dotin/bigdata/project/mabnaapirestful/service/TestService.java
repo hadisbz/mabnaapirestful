@@ -15,7 +15,7 @@ public class TestService {
     }
 
     public void test(){
-        ResponseEntity<String> response = mabnaConf.getResponse("/exchange/instruments", null, HttpMethod.GET, String.class);
+        ResponseEntity<String> response = mabnaConf.getResponse("/stock/balancesheets?_count=1&_expand=announcement_type,financial_view_type.meta", null, HttpMethod.GET, String.class);
         System.out.println(response.getBody());
     }
 }

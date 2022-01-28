@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-public class MeetingTypesService implements GenericService{
+public class MeetingTypesService implements GenericService {
     private final MabnaConf mabnaConf;
     private final MeetingTypesRepository repository;
 

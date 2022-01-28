@@ -1,11 +1,11 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.stock;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.BoardOfDirectorsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.BalancesheetsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.BoardOfDirectorsMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.stock.BoardOfDirectorsModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.BoardOfDirectorsRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.BalancesheetsMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.model.stock.BalancesheetsModel;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.BalancesheetsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
@@ -15,25 +15,25 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-public class BoardOfDirectorsService implements GenericService {
+public class BalancesheetsService implements GenericService{
     private final MabnaConf mabnaConf;
-    private final BoardOfDirectorsRepository repository;
+    private final BalancesheetsRepository repository;
 
-    public BoardOfDirectorsService(MabnaConf mabnaConf, BoardOfDirectorsRepository repository) {
+    public BalancesheetsService(MabnaConf mabnaConf, BalancesheetsRepository repository) {
         this.mabnaConf = mabnaConf;
         this.repository = repository;
     }
 
     @Override
     public void save() throws JsonProcessingException {
-        ResponseEntity<BoardOfDirectorsResponse> response;
+        ResponseEntity<BalancesheetsResponse> response;
         int skip = 0;
         do {
             String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
-            response = mabnaConf.getResponse("/stock/boardofdirectors", filter, HttpMethod.GET, BoardOfDirectorsResponse.class);
+            response = mabnaConf.getResponse("/stock/balancesheets?_expand=announcement_type,financial_view_type.meta", filter, HttpMethod.GET, BalancesheetsResponse.class);
 
             Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
-                        BoardOfDirectorsModel model = BoardOfDirectorsMapper.map(responseInner);
+                        BalancesheetsModel model = BalancesheetsMapper.map(responseInner);
                         repository.save(model);
                     }
             );

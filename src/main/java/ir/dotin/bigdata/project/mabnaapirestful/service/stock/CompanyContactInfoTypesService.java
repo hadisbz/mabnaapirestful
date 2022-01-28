@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-public class CompanyContactInfoTypesService implements GenericService{
+public class CompanyContactInfoTypesService implements GenericService {
     private final MabnaConf mabnaConf;
     private final CompanyContactInfoTypesRepository repository;
 

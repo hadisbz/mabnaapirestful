@@ -8,29 +8,17 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(schema = "public", name = "index_instrument_effects")
+@Table(schema = "public", name = "index_instruments")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class IndexInstrumentEffectsModel {
+public class IndexInstrumentsModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "local_id")
-    private Long localId;
-
     private String id;
 
-    @Column(name="instrument_id")
-    private String instrumentId;
-
-    @Column(name="index_id")
     private String indexId;
 
-    @Column(name="date_time")
-    private String dateTime;
-
-    private Double effect;
-
+    private String instrumentId;
 
     @Embedded
     private MetaModel meta;

@@ -11,11 +11,11 @@ import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractStyles
 import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractTypesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.*;
+import ir.dotin.bigdata.project.mabnaapirestful.service.stock.*;
 import ir.dotin.bigdata.project.mabnaapirestful.service.fund.DividendPaymentsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.fund.FundValuesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.fund.FundsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.fund.RatingsService;
-import ir.dotin.bigdata.project.mabnaapirestful.service.stock.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -213,6 +213,29 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private AssetsService assetsService;
 
+    @Autowired
+    private InitialPublicOfferingsService initialPublicOfferingsService;
+
+    @Autowired
+    private BidAsksService bidAsksService;
+
+    @Autowired
+    private TheoreticalOpeningPricesService theoreticalOpeningPricesService;
+
+    @Autowired
+    private IndexInstrumentsService indexInstrumentsService;
+
+    @Autowired
+    private PercentageValuesService percentageValuesService;
+
+    @Autowired
+    private BoardOfDirectorsItemsService boardOfDirectorsItemsService;
+
+    @Autowired
+    private BalancesheetsService balancesheetsService;
+
+
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -221,7 +244,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        testService.test();
+       testService.test();
 
 //        calendarsService.save();
 //        datesService.save();
@@ -285,7 +308,13 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        instrumentBaseVolumesService.save();
 //        instrumentStaticThresholdsService.save();
 //        assetsService.save();//todo: categories is a list not inserted
-
+//        initialPublicOfferingsService.save();
+//        bidAsksService.save();
+//        theoreticalOpeningPricesService.save();
+//        indexInstrumentsService.save();
+//        percentageValuesService.save();
+//        boardOfDirectorsItemsService.save();
+//        balancesheetsService.save();
 
     }
 }

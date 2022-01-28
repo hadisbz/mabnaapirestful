@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-public class InstrumentsService implements GenericService{
+public class InstrumentsService implements GenericService {
     private final MabnaConf mabnaConf;
     private final InstrumentsRepository repository;
 

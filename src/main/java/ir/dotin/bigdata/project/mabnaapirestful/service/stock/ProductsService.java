@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-public class ProductsService implements GenericService{
+public class ProductsService implements GenericService {
     private final MabnaConf mabnaConf;
     private final ProductsRepository repository;
 

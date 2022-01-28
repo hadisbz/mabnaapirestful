@@ -16,7 +16,7 @@ import java.util.Objects;
 
 @Service
 
-public class ContractTypesService implements GenericService{
+public class ContractTypesService implements GenericService {
     private final MabnaConf mabnaConf;
     private final ContractTypesRepository repository;
 
