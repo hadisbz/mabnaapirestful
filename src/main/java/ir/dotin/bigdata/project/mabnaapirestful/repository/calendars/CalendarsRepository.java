@@ -5,6 +5,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.calendars.CalendarsModel;
         import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CalendarsRepository extends JpaRepository<CalendarsModel, Long> {
+public interface CalendarsRepository extends JpaRepository<CalendarsModel, String> {
 
 }

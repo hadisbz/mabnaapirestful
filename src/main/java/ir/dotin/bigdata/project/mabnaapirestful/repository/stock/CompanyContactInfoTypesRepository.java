@@ -4,5 +4,5 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.stock.CompanyContactInfoTy
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 @Repository
-public interface CompanyContactInfoTypesRepository extends JpaRepository<CompanyContactInfoTypesModel, Long>{
+public interface CompanyContactInfoTypesRepository extends JpaRepository<CompanyContactInfoTypesModel, String>{
 }

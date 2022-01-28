@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ReportTitlesRepository extends JpaRepository<ReportTitlesModel, Long> {
+public interface ReportTitlesRepository extends JpaRepository<ReportTitlesModel, String> {
 
 }
 

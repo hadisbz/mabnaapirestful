@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface DirectorTypesRepository extends JpaRepository<DirectorTypesModel, Long>{
+public interface DirectorTypesRepository extends JpaRepository<DirectorTypesModel, String>{
 }

@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MarketMessagesRepository extends JpaRepository<MarketMessagesModel, Long> {
+public interface MarketMessagesRepository extends JpaRepository<MarketMessagesModel, String> {
 }

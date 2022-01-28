@@ -14,6 +14,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -51,7 +52,7 @@ public class ReportImagesService implements GenericService {
                                             file.getBody()
                                     )
                             );
-                        } catch (IOException e) {
+                        } catch (IOException | HttpClientErrorException e) {
                             e.printStackTrace();
                         }
                     }

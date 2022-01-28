@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BondAuthorityTypesRepository extends JpaRepository<BondAuthorityTypesModel, Long>{
+public interface BondAuthorityTypesRepository extends JpaRepository<BondAuthorityTypesModel, String>{
 }

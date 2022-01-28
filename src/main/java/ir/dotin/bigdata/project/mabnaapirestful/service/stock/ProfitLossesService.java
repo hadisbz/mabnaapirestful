@@ -5,8 +5,12 @@ import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.ProductsRespo
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.ProfitLossesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.ProductsMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.ProfitLossesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ProductsModel;
+import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ProfitLossesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ProductsRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ProfitLossesRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ProfitlossFieldsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
@@ -18,9 +22,9 @@ import java.util.Objects;
 @Service
 public class ProfitLossesService implements GenericService {
     private final MabnaConf mabnaConf;
-    private final ProductsRepository repository;
+    private final ProfitLossesRepository repository;
 
-    public ProfitLossesService(MabnaConf mabnaConf, ProductsRepository repository) {
+    public ProfitLossesService(MabnaConf mabnaConf, ProfitLossesRepository repository) {
         this.mabnaConf = mabnaConf;
         this.repository = repository;
     }
@@ -34,9 +38,8 @@ public class ProfitLossesService implements GenericService {
             response = mabnaConf.getResponse("/stock/profitlosses", filter, HttpMethod.GET, ProfitLossesResponse.class);
 
             Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
-                System.out.println(responseInner);
-                       // ProductsModel model = ProductsMapper.map(responseInner);
-                        //repository.save(model);
+                        ProfitLossesModel model = ProfitLossesMapper.map(responseInner);
+                        repository.save(model);
                     }
             );
             skip += 100;

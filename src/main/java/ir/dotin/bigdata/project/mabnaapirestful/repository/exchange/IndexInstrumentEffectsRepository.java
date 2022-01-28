@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface IndexInstrumentEffectsRepository extends JpaRepository<IndexInstrumentEffectsModel,Long> {
+public interface IndexInstrumentEffectsRepository extends JpaRepository<IndexInstrumentEffectsModel,String> {
 }

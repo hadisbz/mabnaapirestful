@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface InstrumentsRepository extends JpaRepository<InstrumentsModel, Long> {
+public interface InstrumentsRepository extends JpaRepository<InstrumentsModel, String> {
 }

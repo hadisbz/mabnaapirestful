@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface InstrumentStaticThresholdsRepository extends JpaRepository<InstrumentStaticThresholdsModel,Long>{
+public interface InstrumentStaticThresholdsRepository extends JpaRepository<InstrumentStaticThresholdsModel,String>{
 }

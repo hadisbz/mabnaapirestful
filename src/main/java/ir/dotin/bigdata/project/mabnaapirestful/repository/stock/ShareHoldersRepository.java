@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ShareHoldersRepository extends JpaRepository<ShareHoldersModel, Long>{
+public interface ShareHoldersRepository extends JpaRepository<ShareHoldersModel, String>{
 }

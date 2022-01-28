@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AssetStatesRepository extends JpaRepository<AssetStatesModel, Long> {
+public interface AssetStatesRepository extends JpaRepository<AssetStatesModel, String> {
 
 }
 

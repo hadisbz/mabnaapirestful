@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface InstrumentGroupsRepository extends JpaRepository<InstrumentGroupsModel, Long> {
+public interface InstrumentGroupsRepository extends JpaRepository<InstrumentGroupsModel, String> {
 }

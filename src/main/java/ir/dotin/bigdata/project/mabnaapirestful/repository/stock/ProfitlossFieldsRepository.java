@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProfitlossFieldsRepository extends JpaRepository<ProfitlossFieldsModel, Long> {
+public interface ProfitlossFieldsRepository extends JpaRepository<ProfitlossFieldsModel, String> {
 }

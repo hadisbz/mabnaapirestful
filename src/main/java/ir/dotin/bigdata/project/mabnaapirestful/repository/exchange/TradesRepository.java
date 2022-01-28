@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TradesRepository extends JpaRepository<TradesModel,Long>{
+public interface TradesRepository extends JpaRepository<TradesModel,String>{
 }

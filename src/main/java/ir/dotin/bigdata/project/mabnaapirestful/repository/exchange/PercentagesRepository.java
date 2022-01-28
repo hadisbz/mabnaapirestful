@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PercentagesRepository extends JpaRepository<PercentagesModel, Long> {
+public interface PercentagesRepository extends JpaRepository<PercentagesModel, String> {
 }

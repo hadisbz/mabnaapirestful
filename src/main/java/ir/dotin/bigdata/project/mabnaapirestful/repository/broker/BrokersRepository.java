@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BrokersRepository extends JpaRepository<BrokersModel, Long>{
+public interface BrokersRepository extends JpaRepository<BrokersModel, String>{
 }

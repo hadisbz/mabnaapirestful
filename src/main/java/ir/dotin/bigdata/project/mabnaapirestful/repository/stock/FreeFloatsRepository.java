@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface FreeFloatsRepository extends JpaRepository<FreeFloatsModel, Long>{
+public interface FreeFloatsRepository extends JpaRepository<FreeFloatsModel, String>{
 }

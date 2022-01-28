@@ -252,13 +252,13 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
         // categoriesService.save();
         //assetsService.save();
-        testService.test();
-//profitLossesService.save();
+        //testService.test();
+profitLossesService.save();
 //        calendarsService.save();
 //        datesService.save();
 //        occasionTypesService.save();
-//        sourcesService.save();
-//        reportSourcesService.save();
+        //  sourcesService.save();
+       // reportSourcesService.save();
 //        marketMessagesService.save();
 //        percentageActionTypesService.save();
 //        percentageDealerTypesService.save();
@@ -283,7 +283,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        productsService.save();
 //        directorTypesService.save();
 //        positionsService.save();
-//        newsService.save();
+       //newsService.save();
 //        balancesheetFieldsService.save();
 //        cashflowFieldsService.save();
 //        profitlossFieldsService.save();
