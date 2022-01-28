@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.BidAsksResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.BidAsksResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.BidAsksModel;
 
 public class BidAsksMapper {
@@ -16,6 +16,7 @@ public class BidAsksMapper {
                 instrumentId,
                 bidAsksResponseInner.getDateTime(),
                 bidAsksResponseInner.getOrderRank(),
+                bidAsksResponseInner.getAskCount(),
                 bidAsksResponseInner.getAskOrder(),
                 bidAsksResponseInner.getAskVolume(),
                 bidAsksResponseInner.getAskPrice(),

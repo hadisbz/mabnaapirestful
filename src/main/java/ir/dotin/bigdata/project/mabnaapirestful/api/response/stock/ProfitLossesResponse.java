@@ -13,13 +13,13 @@ import java.util.List;
 
 @Getter
 @ToString
-public class BalancesheetsResponse {
+public class ProfitLossesResponse {
     @JsonProperty("data")
-    private List<BalancesheetsResponseInner> data;
+    private List<ProfitLossesResponseInner> data;
 
     @Getter
     @ToString
-    public static class BalancesheetsResponseInner {
+    public static class ProfitLossesResponseInner {
         private String id;
 
         private CompaniesResponse.CompaniesResponseInner company;
@@ -50,6 +50,8 @@ public class BalancesheetsResponse {
 
         @JsonProperty("is_represented")
         private Boolean isRepresented;
+
+        private Long capital;
 
         private String comments;
 

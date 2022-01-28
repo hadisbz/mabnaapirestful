@@ -6,14 +6,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(schema = "public", name = "assets")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AssetsModel {
+public class AssetsModel implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "local_id")
+    private Long localId;
+
     private String id;
 
     @Column(name="asset_type_id")
@@ -45,7 +51,6 @@ public class AssetsModel {
     @Column(name="company_id")
     private String companyId;
 
-
     @Column(name="fund_id")
     private String fundId;
 
@@ -76,7 +81,9 @@ public class AssetsModel {
     @Column(name="entity_type")
     private String entityType;
 
+    @Column(name="categories_Id")
+    private String categoriesId;
+
     @Embedded
     private MetaModel meta;
-
 }

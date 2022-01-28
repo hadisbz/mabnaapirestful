@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.broker;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.broker.BrokersResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.broker.BrokersResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.broker.BrokersModel;
 
 public class BrokersMapper {

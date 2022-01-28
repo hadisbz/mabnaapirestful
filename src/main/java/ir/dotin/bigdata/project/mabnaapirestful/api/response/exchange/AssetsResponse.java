@@ -35,6 +35,9 @@ public class AssetsResponse {
         @JsonProperty("english_name")
         private String englishName;
 
+        @JsonProperty("categories")
+        private List<CategoriesResponse.CategoriesResponseInner> categoriesResponses;
+
         @JsonProperty("short_name")
         private String shortName;
 

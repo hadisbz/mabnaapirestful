@@ -26,6 +26,9 @@ public class BidAsksResponse {
         @JsonProperty("order_rank")
         private Integer orderRank;
 
+        @JsonProperty("ask_count")
+        private Integer askCount;
+
         @JsonProperty("ask_order")
         private Integer askOrder;
 

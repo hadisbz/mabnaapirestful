@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-public class AssetsService implements GenericService{
+public class AssetsService implements GenericService {
     private final MabnaConf mabnaConf;
     private final AssetsRepository repository;
 
@@ -33,8 +33,18 @@ public class AssetsService implements GenericService{
             response = mabnaConf.getResponse("/exchange/assets", filter, HttpMethod.GET, AssetsResponse.class);
 
             Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
-                        AssetsModel model = AssetsMapper.map(responseInner);
-                        repository.save(model);
+                        if (responseInner.getCategoriesResponses().isEmpty() || responseInner.getCategoriesResponses() == null) {
+                            AssetsModel model = AssetsMapper.map(responseInner);
+                            repository.save(model);
+                        } else {
+                            responseInner.getCategoriesResponses().forEach(
+                                    categoriesResponseInner -> {
+                                        AssetsModel model = AssetsMapper.map(responseInner);
+                                        model.setCategoriesId(categoriesResponseInner.getId());
+                                        repository.save(model);
+                                    }
+                            );
+                        }
                     }
             );
             skip += 100;

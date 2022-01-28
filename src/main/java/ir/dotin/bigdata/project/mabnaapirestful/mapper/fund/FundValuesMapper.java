@@ -1,8 +1,8 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.fund;
 
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.fund.FundValuesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.fund.FundValuesModel;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 
 public class FundValuesMapper {
     public static FundValuesModel map(FundValuesResponse.FundValuesResponseInner fundValuesResponseInner) {

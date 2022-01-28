@@ -1,8 +1,11 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.AssetsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.CategoriesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.AssetsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.AssetsModel;
+
+import java.util.stream.Collectors;
 
 public class AssetsMapper {
     public static AssetsModel map(AssetsResponse.AssetsResponseInner assetsResponseInner){
@@ -40,6 +43,7 @@ public class AssetsMapper {
         }
 
         return new AssetsModel(
+                null,
                 assetsResponseInner.getId(),
                 assetTypeId,
                 assetsResponseInner.getTradeSymbol(),
@@ -61,10 +65,9 @@ public class AssetsMapper {
                 assetsResponseInner.getEnglishStateDescription(),
                 entityId,
                 entityType,
+                null,
                 MetaMapper.map(assetsResponseInner.getMetaResponse())
-
         );
-
 
     }
 }

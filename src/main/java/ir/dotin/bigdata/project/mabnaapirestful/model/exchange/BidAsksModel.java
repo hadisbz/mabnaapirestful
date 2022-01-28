@@ -1,5 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.model.exchange;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,6 +26,9 @@ public class BidAsksModel {
 
     @Column(name="order_rank")
     private Integer orderRank;
+
+    @Column(name="ask_count")
+    private Integer askCount;
 
     @Column(name="ask_order")
     private Integer askOrder;

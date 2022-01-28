@@ -1,8 +1,8 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.fund;
 
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.fund.RatingsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.fund.RatingsModel;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 
 
 public class RatingsMapper {

@@ -234,6 +234,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private BalancesheetsService balancesheetsService;
 
+    @Autowired
+    private ProfitLossesService profitLossesService;
 
 
     public static void main(String[] args) {
@@ -244,8 +246,10 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-       testService.test();
-
+       // categoriesService.save();
+        assetsService.save();
+        // testService.test();
+//profitLossesService.save();
 //        calendarsService.save();
 //        datesService.save();
 //        occasionTypesService.save();
