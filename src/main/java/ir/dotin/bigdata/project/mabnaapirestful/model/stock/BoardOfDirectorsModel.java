@@ -14,10 +14,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class BoardOfDirectorsModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "local_id")
-    private Long localId;
-
     private String id;
 
     @Column(name="company_id")

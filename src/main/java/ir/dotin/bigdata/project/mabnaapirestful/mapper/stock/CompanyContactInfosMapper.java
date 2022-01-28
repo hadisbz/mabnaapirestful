@@ -15,7 +15,6 @@ public class CompanyContactInfosMapper {
         if(companyContactInfosResponseInner.getType()!=null)
             CompanyContactInfoTypesResponseId = companyContactInfosResponseInner.getType().getId();
         return new CompanyContactInfosModel(
-                null,
                 companyContactInfosResponseInner.getId(),
                 companyId,
                 CompanyContactInfoTypesResponseId,

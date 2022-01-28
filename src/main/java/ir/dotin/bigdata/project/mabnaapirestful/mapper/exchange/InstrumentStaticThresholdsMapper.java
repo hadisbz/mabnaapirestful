@@ -12,7 +12,6 @@ public class InstrumentStaticThresholdsMapper {
             instrumentId=instrumentStaticThresholdsResponseInner.getInstrument().getId();
 
         return new InstrumentStaticThresholdsModel(
-                null,
                 instrumentStaticThresholdsResponseInner.getId(),
                 instrumentId,
                 instrumentStaticThresholdsResponseInner.getDateTime(),

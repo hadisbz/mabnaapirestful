@@ -19,7 +19,6 @@ public class NewsMapper {
             sourceId = newsResponse.getSource().getId();
 
         return new NewsModel(
-                null,
                 newsResponse.getId(),
                 sourceId,
                 entityId,

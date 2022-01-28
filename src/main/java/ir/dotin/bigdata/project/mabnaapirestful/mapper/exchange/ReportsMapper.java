@@ -28,7 +28,6 @@ public class ReportsMapper {
         }
 
         return new ReportsModel(
-                null,
                 reportsResponse.getId(),
                 reportsResponse.getDate(),
                 reportsResponse.getNumber(),

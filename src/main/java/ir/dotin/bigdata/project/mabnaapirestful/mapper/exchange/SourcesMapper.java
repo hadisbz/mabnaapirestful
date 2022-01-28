@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.SourcesModel;
 public class SourcesMapper {
     public static SourcesModel map(SourcesResponse.SourcesResponseInner sourcesResponseInner) {
         return new SourcesModel(
-                null,
                 sourcesResponseInner.getId(),
                 sourcesResponseInner.getTitle(),
                 sourcesResponseInner.getEnglishTitle(),

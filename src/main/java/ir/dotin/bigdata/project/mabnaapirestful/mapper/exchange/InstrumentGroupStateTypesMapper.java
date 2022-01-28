@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.InstrumentGroupSt
 public class InstrumentGroupStateTypesMapper {
     public static InstrumentGroupStateTypesModel map(InstrumentGroupStateTypesResponse.InstrumentGroupStateTypesResponseInner InstrumentGroupStateTypesResponseInner){
         return new InstrumentGroupStateTypesModel(
-                null,
                 InstrumentGroupStateTypesResponseInner.getId(),
                 InstrumentGroupStateTypesResponseInner.getTitle(),
                 InstrumentGroupStateTypesResponseInner.getEnglishTitle(),

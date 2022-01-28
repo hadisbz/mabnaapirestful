@@ -16,7 +16,6 @@ public class IndexInstrumentEffectsMapper {
             indexId=indexInstrumentEffectsResponseInner.getIndex().getId();
 
         return new IndexInstrumentEffectsModel(
-                null,
                 indexInstrumentEffectsResponseInner.getId(),
                 instrumentId,
                 indexId,

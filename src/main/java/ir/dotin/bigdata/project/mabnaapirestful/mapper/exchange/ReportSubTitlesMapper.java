@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.ReportSubTitlesMo
 public class ReportSubTitlesMapper {
     public static ReportSubTitlesModel map(ReportSubTitlesResponse.ReportSubTitlesResponseInner ReportSubTitlesResponseInner){
         return new ReportSubTitlesModel(
-                null,
                 ReportSubTitlesResponseInner.getId(),
                 ReportSubTitlesResponseInner.getTitle(),
                 ReportSubTitlesResponseInner.getEnglishTitle(),

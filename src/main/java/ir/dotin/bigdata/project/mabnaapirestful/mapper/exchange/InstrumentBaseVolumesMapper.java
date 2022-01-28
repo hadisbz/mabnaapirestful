@@ -12,7 +12,6 @@ public class InstrumentBaseVolumesMapper {
             instrumentId=instrumentBaseVolumesResponseInner.getInstrument().getId();
 
         return new InstrumentBaseVolumesModel(
-                null,
                 instrumentBaseVolumesResponseInner.getId(),
                 instrumentId,
                 instrumentBaseVolumesResponseInner.getDateTime(),

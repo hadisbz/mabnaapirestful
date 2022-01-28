@@ -32,7 +32,6 @@ public class PercentageGroupsMapper {
             dealerTypeId=percentageGroupsResponseInner.getDealerType().getId();
 
         return new PercentageGroupsModel(
-                null,
                 percentageGroupsResponseInner.getId(),
                 percentageGroupsResponseInner.getTitle(),
                 percentageGroupsResponseInner.getEnglishTitle(),

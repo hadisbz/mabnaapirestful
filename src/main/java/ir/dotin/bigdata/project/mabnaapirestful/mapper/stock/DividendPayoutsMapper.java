@@ -16,7 +16,6 @@ public class DividendPayoutsMapper {
             reportId=dividendPayoutsResponseInner.getReport().getId();
 
         return new DividendPayoutsModel(
-                null,
                 dividendPayoutsResponseInner.getId(),
                 meetingId,
                 reportId,

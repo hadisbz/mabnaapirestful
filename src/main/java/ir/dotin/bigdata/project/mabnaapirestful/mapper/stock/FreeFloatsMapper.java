@@ -12,7 +12,6 @@ public class FreeFloatsMapper {
 
 
         return new FreeFloatsModel(
-                null,
                 freeFloatsResponseInner.getId(),
                 freeFloatsResponseInner.getDate(),
                 companyId,

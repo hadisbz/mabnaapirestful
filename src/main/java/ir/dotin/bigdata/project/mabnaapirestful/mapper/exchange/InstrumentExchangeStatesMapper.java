@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.InstrumentExchang
 public class InstrumentExchangeStatesMapper {
     public static InstrumentExchangeStatesModel map(InstrumentExchangeStatesResponse.InstrumentExchangeStatesResponseInner InstrumentExchangeStatesResponseInner){
         return new InstrumentExchangeStatesModel(
-                null,
                 InstrumentExchangeStatesResponseInner.getId(),
                 InstrumentExchangeStatesResponseInner.getTitle(),
                 InstrumentExchangeStatesResponseInner.getEnglishTitle(),

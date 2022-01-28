@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.ReportSourcesMode
 public class ReportSourcesMapper {
     public static ReportSourcesModel map(ReportSourcesResponse.ReportSourcesResponseInner reportSourcesResponseInner) {
         return new ReportSourcesModel(
-                null,
                 reportSourcesResponseInner.getId(),
                 reportSourcesResponseInner.getTitle(),
                 MetaMapper.map(reportSourcesResponseInner.getMetaResponse())

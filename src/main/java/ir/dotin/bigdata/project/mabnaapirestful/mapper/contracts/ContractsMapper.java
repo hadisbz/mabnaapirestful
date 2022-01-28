@@ -30,7 +30,6 @@ public class ContractsMapper {
 
 
         return new ContractsModel(
-                null,
                 contractsResponseInner.getId(),
                 contractsResponseInner.getName(),
                 contractsResponseInner.getEnglishName(),

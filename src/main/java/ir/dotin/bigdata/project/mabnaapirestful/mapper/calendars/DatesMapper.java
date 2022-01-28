@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.calendars.DatesModel;
 public class DatesMapper {
     public static DatesModel map(DatesResponse.DatesResponseInner datesResponseInner) {
         return new DatesModel(
-                null,
                 datesResponseInner.getId(),
                 datesResponseInner.getCalendar().getId(),
                 datesResponseInner.getOccasionType().getId(),

@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.bonds.BondAuthorityTypesMo
 public class BondAuthorityTypesMapper {
     public static BondAuthorityTypesModel map(BondAuthorityTypesResponse.BondAuthorityTypesResponseInner bondAuthorityTypesResponseInner){
         return new BondAuthorityTypesModel(
-                null,
                 bondAuthorityTypesResponseInner.getId(),
                 bondAuthorityTypesResponseInner.getTitle(),
                 MetaMapper.map(bondAuthorityTypesResponseInner.getMetaResponse())

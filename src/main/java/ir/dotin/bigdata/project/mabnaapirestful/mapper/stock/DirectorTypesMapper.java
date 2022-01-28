@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.stock.DirectorTypesModel;
 public class DirectorTypesMapper {
     public static DirectorTypesModel map(DirectorTypesResponse.DirectorTypesResponseInner DirectorTypesResponseInner){
         return new DirectorTypesModel(
-                null,
                 DirectorTypesResponseInner.getId(),
                 DirectorTypesResponseInner.getTitle(),
                 DirectorTypesResponseInner.getEnglishTitle(),

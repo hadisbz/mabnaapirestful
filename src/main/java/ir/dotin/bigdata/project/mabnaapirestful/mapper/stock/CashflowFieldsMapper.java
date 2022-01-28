@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.stock.CashflowFieldsModel;
 public class CashflowFieldsMapper {
     public static CashflowFieldsModel map(CashflowFieldsResponse.CashflowFieldsResponseInner cashflowFieldsResponseInner){
         return new CashflowFieldsModel(
-                null,
                 cashflowFieldsResponseInner.getId(),
                 cashflowFieldsResponseInner.getTitle(),
                 cashflowFieldsResponseInner.getEnglishTitle(),

@@ -13,10 +13,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class DividendPaymentsModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "local_id")
-    private Long localId;
-
     private String id;
 
     @Column(name="fund_id")

@@ -12,7 +12,6 @@ public class TradesMapper {
             instrumentId=tradesResponseInner.getInstrument().getId();
 
         return new TradesModel(
-                null,
                 tradesResponseInner.getId(),
                 instrumentId,
                 tradesResponseInner.getDateTime(),

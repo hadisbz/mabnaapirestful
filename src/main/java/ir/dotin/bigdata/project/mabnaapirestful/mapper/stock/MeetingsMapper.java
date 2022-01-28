@@ -20,7 +20,6 @@ public class MeetingsMapper {
             meetingTypeId=meetingsResponseInner.getType().getId();
 
         return new MeetingsModel(
-                null,
                 meetingsResponseInner.getId(),
                 companyId,
                 reportId,

@@ -13,7 +13,6 @@ public class CompanyCategoriesMapper {
         if(companyCategoriesResponseInner.getCategory()!=null)
             categoryId = companyCategoriesResponseInner.getCategory().getId();
         return new CompanyCategoriesModel(
-                null,
                 companyCategoriesResponseInner.getId(),
                 companyId,
                 categoryId,

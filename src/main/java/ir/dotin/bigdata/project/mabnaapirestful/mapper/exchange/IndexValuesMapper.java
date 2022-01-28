@@ -12,7 +12,6 @@ public class IndexValuesMapper {
             indexId =  indexValuesResponseInner.getIndex().getId();
 
         return new  IndexValuesModel(
-                null,
                  indexValuesResponseInner.getId(),
                 indexId,
                  indexValuesResponseInner.getDateTime(),

@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.contracts.ContractStylesMo
 public class ContractStylesMapper {
     public static ContractStylesModel map(ContractStylesResponse.ContractStylesResponseInner ContractStylesResponseInner){
         return new ContractStylesModel(
-                null,
                 ContractStylesResponseInner.getId(),
                 ContractStylesResponseInner.getTitle(),
                 ContractStylesResponseInner.getEnglishTitle(),

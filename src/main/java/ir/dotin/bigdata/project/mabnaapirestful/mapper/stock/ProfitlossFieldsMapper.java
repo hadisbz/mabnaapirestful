@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ProfitlossFieldsMode
 public class ProfitlossFieldsMapper {
     public static ProfitlossFieldsModel map(ProfitlossFieldsResponse.ProfitlossFieldsResponseInner profitlossFieldsResponseInner){
         return new ProfitlossFieldsModel(
-                null,
                 profitlossFieldsResponseInner.getId(),
                 profitlossFieldsResponseInner.getTitle(),
                 profitlossFieldsResponseInner.getEnglishTitle(),

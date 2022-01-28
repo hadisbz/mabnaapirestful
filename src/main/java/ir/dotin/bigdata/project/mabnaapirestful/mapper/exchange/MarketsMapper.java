@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.MarketsModel;
 public class MarketsMapper {
     public static MarketsModel map(MarketsResponse.MarketsResponseInner marketsResponseInner){
         return new MarketsModel(
-                null,
                 marketsResponseInner.getId(),
                 marketsResponseInner.getCode(),
                 marketsResponseInner.getTitle(), marketsResponseInner.getEnglishTitle(),

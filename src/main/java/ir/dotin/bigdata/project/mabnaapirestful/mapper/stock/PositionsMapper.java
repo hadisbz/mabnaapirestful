@@ -6,7 +6,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.stock.PositionsModel;
 public class PositionsMapper {
     public static PositionsModel map(PositionsResponse.PositionsResponseInner PositionsResponseInner){
         return new PositionsModel(
-                null,
                 PositionsResponseInner.getId(),
                 PositionsResponseInner.getTitle(),
                 PositionsResponseInner.getEnglishTitle(),

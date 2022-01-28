@@ -15,7 +15,6 @@ public class IndexIntradayValuesMapper {
             indexId =  indexIntradayValuesResponseInner.getIndex().getId();
 
         return new  IndexIntradayValuesModel(
-                null,
                 indexIntradayValuesResponseInner.getId(),
                 indexValuesId,
                 indexId,

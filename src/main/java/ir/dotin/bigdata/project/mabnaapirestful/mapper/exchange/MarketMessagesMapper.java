@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.MarketMessagesMod
 public class MarketMessagesMapper {
     public static MarketMessagesModel map(MarketMessagesResponse.MarketMessagesResponseInner marketMessagesResponseInner) {
         return new MarketMessagesModel(
-                null,
                 marketMessagesResponseInner.getId(),
                 marketMessagesResponseInner.getDateTime(),
                 marketMessagesResponseInner.getTitle(),

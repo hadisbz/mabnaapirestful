@@ -14,7 +14,6 @@ public class ShareHoldersMapper {
         if(shareHoldersResponseInner.getReport()!=null)
             reportId=shareHoldersResponseInner.getReport().getId();
         return new ShareHoldersModel(
-                null,
                 shareHoldersResponseInner.getId(),
                 shareHoldersResponseInner.getDate(),
                 companyId,

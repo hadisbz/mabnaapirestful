@@ -20,7 +20,6 @@ public class BoardOfDirectorsMapper {
             reportId=boardOfDirectorsResponseInner.getReport().getId();
 
         return new BoardOfDirectorsModel(
-                null,
                 boardOfDirectorsResponseInner.getId(),
                 companyId,
                 meetingId,

@@ -55,7 +55,6 @@ public class FundsMapper {
         }
 
         return new FundsModel(
-                null,
                 fundsResponseInner.getId(),
                 fundsResponseInner.getCode(),
                 fundsResponseInner.getName(),

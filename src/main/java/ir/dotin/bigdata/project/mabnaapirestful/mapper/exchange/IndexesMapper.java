@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.IndexesModel;
 public class IndexesMapper {
     public static IndexesModel map(IndexesResponse.IndexesResponseInner IndexesResponseInner){
         return new IndexesModel(
-                null,
                 IndexesResponseInner.getId(),
                 IndexesResponseInner.getCode(),
                 IndexesResponseInner.getName(),

@@ -13,7 +13,6 @@ public class CompaniesMapper {
         if(companiesResponseInner.getExchange()!=null)
             exchangeId = companiesResponseInner.getExchange().getId();
         return new CompaniesModel(
-                null,
                 companiesResponseInner.getId(),
                 companiesResponseInner.getName(),
                 companiesResponseInner.getEnglishName(),

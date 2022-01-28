@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.calendars.OccasionTypesMod
 public class OccasionTypesMapper {
     public static OccasionTypesModel map(OccasionTypesResponse.OccasionTypesInner occasionTypesInner){
         return new OccasionTypesModel(
-                null,
                 occasionTypesInner.getId(),
                 occasionTypesInner.getTitle(),
                 occasionTypesInner.getEnglishTitle(),

@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.BoardsModel;
 public class BoardsMapper {
     public static BoardsModel map(BoardsResponse.BoardsResponseInner BoardsResponseInner){
         return new BoardsModel(
-                null,
                 BoardsResponseInner.getId(),
                 BoardsResponseInner.getTitle(),
                 BoardsResponseInner.getEnglishTitle(),

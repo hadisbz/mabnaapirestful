@@ -8,7 +8,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.contracts.ContractTypesMod
 public class ContractTypesMapper {
     public static ContractTypesModel map(ContractTypesResponse.ContractTypesResponseInner ContractTypesResponseInner) {
         return new ContractTypesModel(
-                null,
                 ContractTypesResponseInner.getId(),
                 ContractTypesResponseInner.getTitle(),
                 ContractTypesResponseInner.getEnglishTitle(),

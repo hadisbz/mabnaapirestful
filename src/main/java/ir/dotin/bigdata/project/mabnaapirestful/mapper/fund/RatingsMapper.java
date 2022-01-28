@@ -19,7 +19,6 @@ public class RatingsMapper {
             creditRaterType = ratingsResponseInner.getCreditRater().getMetaResponse().getType();
         }
         return new RatingsModel (
-                null,
                 ratingsResponseInner.getId(),
                 fundId,
                 ratingsResponseInner.getDate(),

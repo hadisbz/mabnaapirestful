@@ -11,7 +11,6 @@ public class FundValuesMapper {
             FundId = fundValuesResponseInner.getFund().getId();
         }
         return new FundValuesModel(
-                null,
                 fundValuesResponseInner.getId(),
                 FundId,
                 fundValuesResponseInner.getDate(),

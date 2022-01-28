@@ -15,7 +15,6 @@ public class BrokersMapper {
         }
 
         return new BrokersModel(
-                null,
                 brokersResponseInner.getId(),
                 brokersResponseInner.getCode(),
                 brokersResponseInner.getName(),

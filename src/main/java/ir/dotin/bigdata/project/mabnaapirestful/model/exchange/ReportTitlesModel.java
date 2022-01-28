@@ -15,10 +15,6 @@ import javax.persistence.*;
 
 public class ReportTitlesModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "local_id")
-    private Long localId;
-
     private String id;
 
     private String title;

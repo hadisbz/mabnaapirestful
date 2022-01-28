@@ -12,7 +12,6 @@ public class IndexIntradayTradeSummariesMapper {
             indexId = indexIntradayTradeSummariesResponseInner.getIndex().getId();
 
         return new IndexIntradayTradeSummariesModel(
-                null,
                 indexIntradayTradeSummariesResponseInner.getId(),
                 indexId,
                 indexIntradayTradeSummariesResponseInner.getDateTime(),

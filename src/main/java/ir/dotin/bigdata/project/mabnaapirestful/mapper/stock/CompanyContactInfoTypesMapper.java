@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.stock.CompanyContactInfoTy
 public class CompanyContactInfoTypesMapper {
     public static CompanyContactInfoTypesModel map(CompanyContactInfoTypesResponse.CompanyContactInfoTypesResponseInner companyContactInfoTypesResponseInner){
         return new CompanyContactInfoTypesModel(
-                null,
                 companyContactInfoTypesResponseInner.getId(),
                 companyContactInfoTypesResponseInner.getTitle(),
                 companyContactInfoTypesResponseInner.getEnglishTitle(),

@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.stock.BalancesheetFieldsMo
 public class BalancesheetFieldsMapper {
     public static BalancesheetFieldsModel map(BalancesheetFieldsResponse.BalancesheetFieldsResponseInner balancesheetFieldsResponseInner){
         return new BalancesheetFieldsModel(
-                null,
                 balancesheetFieldsResponseInner.getId(),
                 balancesheetFieldsResponseInner.getTitle(),
                 balancesheetFieldsResponseInner.getEnglishTitle(),

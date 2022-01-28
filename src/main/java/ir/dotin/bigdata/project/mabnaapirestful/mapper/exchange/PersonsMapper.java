@@ -15,7 +15,6 @@ public class PersonsMapper {
             genderTypeMetaType = personsResponseInner.getGenderType().getMetaResponse().getType();
         }
         return new PersonsModel(
-                null,
                 personsResponseInner.getId(),
                 personsResponseInner.getFirstName(),
                 personsResponseInner.getEnglishFirstName(),

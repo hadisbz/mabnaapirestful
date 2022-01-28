@@ -11,7 +11,6 @@ public class DividendPaymentsMapper {
             FundId = dividendPaymentsResponseInner.getFund().getId();
         }
         return new DividendPaymentsModel(
-                null,
                 dividendPaymentsResponseInner.getId(),
                 FundId,
                 dividendPaymentsResponseInner.getDate(),

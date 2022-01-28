@@ -59,7 +59,6 @@ public class InstrumentsMapper {
         }
 
         return new InstrumentsModel(
-                null,
                 instrumentsResponseInner.getId(),
                 instrumentsResponseInner.getCode(),
                 instrumentsResponseInner.getBbsCode(),

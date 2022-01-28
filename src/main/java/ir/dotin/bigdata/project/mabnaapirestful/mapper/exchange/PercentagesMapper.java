@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.PercentagesModel;
 public class PercentagesMapper {
     public static PercentagesModel map(PercentagesResponse.PercentagesResponseInner percentagesResponseInner) {
         return new PercentagesModel(
-                null,
                 percentagesResponseInner.getId(),
                 percentagesResponseInner.getTitle(),
                 percentagesResponseInner.getEnglishTitle(),

@@ -7,7 +7,6 @@ import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.GenderTypesModel;
 public class GenderTypesMapper {
     public static GenderTypesModel map(GenderTypesResponse.GenderTypesResponseInner GenderTypesResponseInner){
         return new GenderTypesModel(
-                null,
                 GenderTypesResponseInner.getId(),
                 GenderTypesResponseInner.getTitle(),
                 GenderTypesResponseInner.getEnglishTitle(),

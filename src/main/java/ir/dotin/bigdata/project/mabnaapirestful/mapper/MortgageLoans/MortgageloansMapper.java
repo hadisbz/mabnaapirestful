@@ -11,7 +11,6 @@ public class MortgageloansMapper {
             exchangId = mortgageloansResponseInner.getExchange().getId();
 
         return new MortgageLoansModel(
-                null,
                 mortgageloansResponseInner.getId(),
                 mortgageloansResponseInner.getName(),
                 mortgageloansResponseInner.getEnglishName(),
