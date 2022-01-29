@@ -252,8 +252,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
         // categoriesService.save();
         //assetsService.save();
-        //testService.test();
-profitLossesService.save();
+        testService.test();
+//        profitLossesService.save();
 //        calendarsService.save();
 //        datesService.save();
 //        occasionTypesService.save();

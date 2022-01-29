@@ -25,4 +25,21 @@ public class AnnouncementTypeModel {
 
     @Column(name="announcement_type_meta_type")
     private String announcementTypeMetaType;
+
+    @Column(name = "announcement_type_meta_version")
+    private Long announcementTypeVersion;
+
+    @Column(name = "announcement_type_meta_state")
+    private String announcementTypeState;
+
+    @Column(name = "announcement_type_meta_insert_date_time")
+    private String announcementTypeInsertDateTime;
+
+    @Column(name = "announcement_type_meta_update_date_time")
+    private String announcementTypeUpdateDateTime;
+
+    @Column(name = "announcement_type_meta_delete_date_time")
+    private String announcementTypeDeleteDateTime;
+
+
 }

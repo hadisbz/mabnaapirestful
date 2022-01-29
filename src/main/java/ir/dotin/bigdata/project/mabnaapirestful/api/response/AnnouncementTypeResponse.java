@@ -16,4 +16,5 @@ public class AnnouncementTypeResponse {
 
     @JsonProperty("meta")
     private MetaResponse metaResponse;
+
 }

@@ -11,7 +11,13 @@ public class AnnouncementTypeMapper {
                 announcementTypeResponse.getId(),
                 announcementTypeResponse.getTitle(),
                 announcementTypeResponse.getEnglishTitle(),
-                announcementTypeResponse.getMetaResponse().getType()
+                announcementTypeResponse.getMetaResponse().getType(),
+                announcementTypeResponse.getMetaResponse().getVersion(),
+                announcementTypeResponse.getMetaResponse().getState(),
+                announcementTypeResponse.getMetaResponse().getInsertDateTime(),
+                announcementTypeResponse.getMetaResponse().getUpdateDateTime(),
+                announcementTypeResponse.getMetaResponse().getDeleteDateTime()
+
         );
     }
 }

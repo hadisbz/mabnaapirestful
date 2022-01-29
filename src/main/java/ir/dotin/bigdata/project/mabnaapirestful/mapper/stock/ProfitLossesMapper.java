@@ -5,7 +5,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.mapper.AnnouncementTypeMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.FinancialViewMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.AnnouncementTypeModel;
-import ir.dotin.bigdata.project.mabnaapirestful.model.FinancialViewModel;
+import ir.dotin.bigdata.project.mabnaapirestful.model.FinancialViewTypeModel;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ProfitLossesModel;
 
 public class ProfitLossesMapper {
@@ -14,7 +14,7 @@ public class ProfitLossesMapper {
         String meetingId= null;
         String reportId= null;
         AnnouncementTypeModel announcementTypeModel= null;
-        FinancialViewModel financialViewModel = null;
+        FinancialViewTypeModel financialViewModel = null;
 
         if(profitLossesResponseInner.getCompany()!=null)
             companyId=profitLossesResponseInner.getCompany().getId();

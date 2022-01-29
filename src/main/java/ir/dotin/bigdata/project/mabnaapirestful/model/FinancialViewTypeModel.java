@@ -11,7 +11,7 @@ import javax.persistence.Embeddable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FinancialViewModel {
+public class FinancialViewTypeModel {
     @Column(name="financial_view_type_id")
     private String financialViewTypeID;
 
@@ -23,4 +23,19 @@ public class FinancialViewModel {
 
     @Column(name="financial_view_type_meta_type")
     private String financialViewTypeMetaType;
+
+    @Column(name = "financial_view_type_meta_version")
+    private Long financialViewTypeVersion;
+
+    @Column(name = "financial_view_type_meta_state")
+    private String financialViewTypeState;
+
+    @Column(name = "financial_view_type_meta_insert_date_time")
+    private String financialViewTypeInsertDateTime;
+
+    @Column(name = "financial_view_type_meta_update_date_time")
+    private String financialViewTypeUpdateDateTime;
+
+    @Column(name = "financial_view_type_meta_delete_date_time")
+    private String financialViewTypeDeleteDateTime;
 }
