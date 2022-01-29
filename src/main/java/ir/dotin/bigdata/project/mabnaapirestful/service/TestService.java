@@ -24,7 +24,7 @@ public class TestService {
     }
 
     public void test() throws IOException {
-        ResponseEntity<String> response = mabnaConf.getResponse("/stock/cashflows?_expand=announcement_type,financial_view_type", null, HttpMethod.GET, String.class);
+        ResponseEntity<String> response = mabnaConf.getResponse("/stock/cashflowitems", null, HttpMethod.GET, String.class);
         System.out.println(response.getBody());
     }
 }

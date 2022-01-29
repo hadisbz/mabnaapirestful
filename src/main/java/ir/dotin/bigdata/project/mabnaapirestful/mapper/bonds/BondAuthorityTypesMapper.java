@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.bonds;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.bonds.BondAuthorityTypesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.bonds.BondAuthorityTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.bonds.BondAuthorityTypesModel;
 

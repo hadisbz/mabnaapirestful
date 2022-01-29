@@ -1,9 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.AssetsResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.ReportImagesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.exchange.ReportImagesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.AssetsModel;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.ReportImagesModel;
 
 public class ReportImagesMapper {

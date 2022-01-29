@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.fund;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.fund.FundValuesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.fund.FundValuesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.fund.FundValuesMapper;

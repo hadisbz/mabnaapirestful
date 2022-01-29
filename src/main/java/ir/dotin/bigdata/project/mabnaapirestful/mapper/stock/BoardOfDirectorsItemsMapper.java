@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.stock;
 
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.BoardOfDirectorsItemsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.stock.BoardOfDirectorsItemsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.BoardOfDirectorsItemsModel;
 
 public class BoardOfDirectorsItemsMapper {

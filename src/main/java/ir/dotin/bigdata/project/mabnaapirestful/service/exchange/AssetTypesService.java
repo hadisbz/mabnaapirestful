@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.exchange;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.AssetTypesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.exchange.AssetTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.AssetTypesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.AssetTypesModel;

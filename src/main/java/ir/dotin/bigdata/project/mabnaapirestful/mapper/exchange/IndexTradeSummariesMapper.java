@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.IndexTradeSummariesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.exchange.IndexTradeSummariesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.IndexTradeSummariesModel;
 
 public class IndexTradeSummariesMapper {

@@ -1,9 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper;
 
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.AnnouncementTypeResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.AnnouncementTypeResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.AnnouncementTypeModel;
-import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 
 public class AnnouncementTypeMapper {
     public static AnnouncementTypeModel map(AnnouncementTypeResponse announcementTypeResponse){
