@@ -2,7 +2,6 @@ package ir.dotin.bigdata.project.mabnaapirestful.api.response.stock;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.AnnouncementTypeResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.EntityResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.FinancialViewTypeResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.ReportsResponse;

@@ -2,11 +2,11 @@ package ir.dotin.bigdata.project.mabnaapirestful.service.exchange;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.BidAsksResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.BidAsksMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.BidAsksModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.exchange.BidAsksRepository;
-import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

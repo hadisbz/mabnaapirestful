@@ -1,17 +1,12 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.stock;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.ProductsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.ProfitLossesResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.ProductsMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.ProfitLossesMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ProductsModel;
-import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ProfitLossesModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ProductsRepository;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ProfitLossesRepository;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ProfitlossFieldsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
+import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.ProfitLossesMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ProfitLossesModel;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ProfitLossesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

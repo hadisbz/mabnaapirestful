@@ -2,11 +2,11 @@ package ir.dotin.bigdata.project.mabnaapirestful.service.fund;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.fund.DividendPaymentsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.fund.DividendPaymentsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.fund.DividendPaymentsModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.fund.DividendPaymentsRepository;
-import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

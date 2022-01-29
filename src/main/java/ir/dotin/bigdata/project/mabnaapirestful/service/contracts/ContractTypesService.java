@@ -2,11 +2,11 @@ package ir.dotin.bigdata.project.mabnaapirestful.service.contracts;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.contracts.ContractTypesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.contracts.ContractTypesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.contracts.ContractTypesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.ContractTypesRepository;
-import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

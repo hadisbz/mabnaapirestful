@@ -2,13 +2,13 @@ package ir.dotin.bigdata.project.mabnaapirestful.service.exchange;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.ReportImagesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.ReportImagesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.ReportImagesFileModel;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.ReportImagesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.exchange.ReportImagesFileRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.exchange.ReportImagesRepository;
-import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 
 import java.io.IOException;
-import java.util.Locale;
 import java.util.Objects;
 
 @Service

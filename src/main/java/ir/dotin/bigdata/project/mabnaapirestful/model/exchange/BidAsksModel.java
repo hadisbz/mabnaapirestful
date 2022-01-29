@@ -25,25 +25,25 @@ public class BidAsksModel {
     private String dateTime;
 
     @Column(name="order_rank")
-    private Integer orderRank;
+    private Long orderRank;
 
     @Column(name="ask_count")
-    private Integer askCount;
+    private Long askCount;
 
     @Column(name="ask_order")
-    private Integer askOrder;
+    private Long askOrder;
 
     @Column(name="ask_volume")
-    private Integer askVolume;
+    private Long askVolume;
 
     @Column(name="ask_price")
     private Double askPrice;
 
     @Column(name="bid_order")
-    private Integer bidOrder;
+    private Long bidOrder;
 
     @Column(name="bid_volume")
-    private Integer bidVolume;
+    private Long bidVolume;
 
     @Column(name="bid_price")
     private Double bidPrice;

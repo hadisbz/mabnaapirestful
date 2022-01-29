@@ -24,25 +24,25 @@ public class BidAsksResponse {
         private String dateTime;
 
         @JsonProperty("order_rank")
-        private Integer orderRank;
+        private Long orderRank;
 
         @JsonProperty("ask_count")
-        private Integer askCount;
+        private Long askCount;
 
         @JsonProperty("ask_order")
-        private Integer askOrder;
+        private Long askOrder;
 
         @JsonProperty("ask_volume")
-        private Integer askVolume;
+        private Long askVolume;
 
         @JsonProperty("ask_price")
         private Double askPrice;
 
         @JsonProperty("bid_order")
-        private Integer bidOrder;
+        private Long bidOrder;
 
         @JsonProperty("bid_volume")
-        private Integer bidVolume;
+        private Long bidVolume;
 
         @JsonProperty("bid_price")
         private Double bidPrice;

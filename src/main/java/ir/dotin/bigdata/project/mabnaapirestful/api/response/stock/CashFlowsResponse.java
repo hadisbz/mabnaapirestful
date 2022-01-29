@@ -12,13 +12,13 @@ import java.util.List;
 
 @Getter
 @ToString
-public class ProfitLossesResponse {
+public class CashFlowsResponse {
     @JsonProperty("data")
-    private List<ProfitLossesResponseInner> data;
+    private List<CashFlowsResponseInner> data;
 
     @Getter
     @ToString
-    public static class ProfitLossesResponseInner {
+    public static class CashFlowsResponseInner {
         private String id;
 
         private CompaniesResponse.CompaniesResponseInner company;
@@ -50,8 +50,6 @@ public class ProfitLossesResponse {
         @JsonProperty("is_represented")
         private Boolean isRepresented;
 
-        private Long capital;
-
         private String comments;
 
         @JsonProperty("english_comments")
@@ -60,5 +58,4 @@ public class ProfitLossesResponse {
         @JsonProperty("meta")
         private MetaResponse metaResponse;
     }
-
 }

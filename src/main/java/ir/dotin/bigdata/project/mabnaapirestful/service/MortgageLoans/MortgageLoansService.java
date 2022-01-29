@@ -1,12 +1,12 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.MortgageLoans;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.mortgageLoans.MortgageLoansResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MortgageLoans.MortgageloansMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.mortgageLoans.MortgageLoansModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.mortgageLoans.MortgageLoansRepository;
-import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
