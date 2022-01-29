@@ -20,10 +20,10 @@ public class RatingsModel {
 
     private String date;
 
-    private Integer rating;
+    private Long rating;
 
     @Column(name="rating_period")
-    private Integer ratingPeriod;
+    private Long ratingPeriod;
 
     @Column(name="credit_rater_id")
     private String creditRaterID;

@@ -23,7 +23,7 @@ public class InstrumentBaseVolumesModel {
     private String dateTime;
 
     @Column(name="base_volume")
-    private Integer baseVolume;
+    private Long baseVolume;
 
     @Embedded
     private MetaModel meta;

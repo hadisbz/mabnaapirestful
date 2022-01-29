@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.exchange.CategoriesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.CategoriesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.CategoriesModel;
 public class CategoriesMapper {
     public static CategoriesModel map(CategoriesResponse.CategoriesResponseInner categoriesResponseInner){

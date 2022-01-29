@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.exchange;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.exchange.AssetsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.AssetsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.AssetsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.AssetsModel;
@@ -33,13 +33,18 @@ public class AssetsService implements GenericService {
             response = mabnaConf.getResponse("/exchange/assets", filter, HttpMethod.GET, AssetsResponse.class);
 
             Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
-                        if (responseInner.getCategoriesResponses().isEmpty() || responseInner.getCategoriesResponses() == null) {
-                            AssetsModel model = AssetsMapper.map(responseInner);
+                AssetsModel model = AssetsMapper.map(responseInner);
+
+                        if (responseInner.getCategoriesResponses() == null)
                             repository.save(model);
-                        } else {
+
+                        else if (responseInner.getCategoriesResponses().isEmpty())
+                            repository.save(model);
+
+                        else {
+
                             responseInner.getCategoriesResponses().forEach(
                                     categoriesResponseInner -> {
-                                        AssetsModel model = AssetsMapper.map(responseInner);
                                         model.setCategoriesId(categoriesResponseInner.getId());
                                         repository.save(model);
                                     }

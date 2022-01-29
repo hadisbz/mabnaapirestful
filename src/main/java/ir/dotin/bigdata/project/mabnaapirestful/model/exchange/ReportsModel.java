@@ -39,6 +39,9 @@ public class ReportsModel {
     @Column(name = "entity_type")
     private String entityType;
 
+    @Column(name="images_id")
+    private String imagesId;
+
 
     @Embedded
     private MetaModel meta;

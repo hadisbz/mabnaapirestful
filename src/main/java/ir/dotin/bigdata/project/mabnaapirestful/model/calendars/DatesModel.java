@@ -22,11 +22,11 @@ public class DatesModel {
     @Column(name = "occasion_type_id")
     private String occasionTypesId;
 
-    private Integer year;
+    private Long year;
 
-    private Integer month;
+    private Long month;
 
-    private Integer day;
+    private Long day;
 
     private String notes;
 

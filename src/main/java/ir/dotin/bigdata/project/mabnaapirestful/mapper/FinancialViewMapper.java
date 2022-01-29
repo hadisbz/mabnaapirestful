@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.FinancialViewTypeResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.FinancialViewTypeResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.FinancialViewTypeModel;
 
 public class FinancialViewMapper {

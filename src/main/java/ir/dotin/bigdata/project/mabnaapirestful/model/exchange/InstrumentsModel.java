@@ -53,19 +53,19 @@ public class InstrumentsModel {
     private String valueType;
 
     @Column(name="base_volume")
-    private Integer baseVolume;
+    private Long baseVolume;
 
     @Column(name="nominal_price")
     private Double nominalPrice;
 
     @Column(name="price_tick")
-    private Integer priceTick;
+    private Long priceTick;
 
     @Column(name="trade_tick")
-    private Integer tradeTick;
+    private Long tradeTick;
 
     @Column(name="payment_delay")
-    private Integer paymentDelay;
+    private Long paymentDelay;
 
     @Column(name="minimum_volume_permit")
     private Long minimumVolumePermit;

@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.bonds;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.bonds.BondAuthorityTypesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.bonds.BondAuthorityTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.bonds.BondAuthorityTypesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.bonds.BondAuthorityTypesModel;
@@ -30,7 +30,7 @@ public class BondAuthorityTypesService implements GenericService {
         int skip = 0;
         do {
             String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
-            response = mabnaConf.getResponse("/bond/bondauthoritytypes", filter, HttpMethod.GET, BondAuthorityTypesResponse.class);
+            response = mabnaConf.getResponse("/bond/bondauthoritytypes?_sort=id", filter, HttpMethod.GET, BondAuthorityTypesResponse.class);
 
             Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
                         BondAuthorityTypesModel model = BondAuthorityTypesMapper.map(responseInner);

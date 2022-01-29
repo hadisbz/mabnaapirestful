@@ -44,14 +44,14 @@ public class TradesModel {
     private Double closePriceChange;
 
     @Column(name="buyer_count")
-    private Integer buyerCount;
+    private Long buyerCount;
 
     private Long volume;
 
     private Double value;
 
     @Column(name="trade_count")
-    private Integer tradeCount;
+    private Long tradeCount;
 
     @Column(name="adjusted_close_price")
     private Double adjustedClosePrice;

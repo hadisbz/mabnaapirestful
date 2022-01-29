@@ -22,7 +22,7 @@ public class TheoreticalOpeningPricesModel {
     @Column(name="date_time")
     private String dateTime;
 
-    private Integer price;
+    private Long price;
 
     @Embedded
     private MetaModel meta;

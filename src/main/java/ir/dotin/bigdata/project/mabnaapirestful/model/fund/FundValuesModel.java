@@ -20,19 +20,19 @@ public class FundValuesModel {
     private String date;
 
     @Column(name = "bid_price")
-    private Integer bidPrice;
+    private Long bidPrice;
 
     @Column(name = "redemption_price")
-    private Integer redemptionPrice;
+    private Long redemptionPrice;
 
     @Column(name="statistical_price")
-    private Integer statisticalPrice;
+    private Long statisticalPrice;
 
     @Column(name="bid_count")
-    private Integer bidCount;
+    private Long bidCount;
 
     @Column(name="redemption_count")
-    private Integer redemptionCount;
+    private Long redemptionCount;
 
     private Long nav;
 

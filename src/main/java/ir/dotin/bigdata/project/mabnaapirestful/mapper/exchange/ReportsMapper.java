@@ -1,14 +1,13 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.exchange.ReportsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.ReportsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.ReportsModel;
 
 public class ReportsMapper {
     public static ReportsModel map(ReportsResponse.ReportsResponseInner reportsResponse) {
         String sourceId = null;
         String titleId = null;
-        String subtitlesId = null;
         String entityId = null;
         String entityType = null;
 
@@ -17,10 +16,6 @@ public class ReportsMapper {
 
         if(reportsResponse.getTitle()!=null)
             titleId = reportsResponse.getTitle().getId();
-
-        if(reportsResponse.getSubtitles()!=null)
-            subtitlesId = String.valueOf(reportsResponse.getSubtitles());
-
 
         if (reportsResponse.getEntity() != null) {
             entityId = reportsResponse.getEntity().getId();
@@ -34,9 +29,10 @@ public class ReportsMapper {
                 sourceId,
                 titleId,
                 reportsResponse.getFiscalYear(),
-                subtitlesId,
+                null,
                 entityId,
                 entityType,
+                null,
                 MetaMapper.map(reportsResponse.getMetaResponse())
         );
     }

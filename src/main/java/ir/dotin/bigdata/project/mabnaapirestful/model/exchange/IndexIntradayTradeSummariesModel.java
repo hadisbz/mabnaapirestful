@@ -26,16 +26,16 @@ public class IndexIntradayTradeSummariesModel {
     private Long volume;
 
     @Column(name = "trade_count")
-    private Integer tradeCount;
+    private Long tradeCount;
 
     @Column(name = "buyer_count")
-    private Integer buyerCount;
+    private Long buyerCount;
 
     @Column(name= "advance_trade_count")
-    private  Integer advanceTradeCount;
+    private  Long advanceTradeCount;
 
     @Column(name = "decline_trade_count")
-    private Integer declineTradeCount;
+    private Long declineTradeCount;
 
     @Embedded
     private MetaModel metaModel;

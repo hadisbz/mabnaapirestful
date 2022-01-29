@@ -157,8 +157,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private CategoriesService categoriesService;
 
-    @Autowired
-    private ReportsService reportsService;
+//    @Autowired
+//    private ReportsService reportsService;
 
     @Autowired
     private BrokersService brokersService;
@@ -257,11 +257,11 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //reportImagesService.save();
+//        reportImagesService.save();
 
         // categoriesService.save();
-        //assetsService.save();
-//        testService.test();
+//        assetsService.save();
+        testService.test();
 //        profitLossesService.save();
 //        calendarsService.save();
 //        datesService.save();
@@ -334,7 +334,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        balancesheetsService.save();
 //        profitLossItemsService.save();
 //        cashFlowsService.save();
-        cashFlowItemsService.save();
+//        cashFlowItemsService.save();
+//        cashflowFieldsService.save();
+//        reportsService.save();
 
     }
 }

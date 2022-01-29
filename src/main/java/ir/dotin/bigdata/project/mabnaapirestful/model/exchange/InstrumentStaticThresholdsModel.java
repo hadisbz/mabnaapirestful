@@ -23,10 +23,10 @@ public class InstrumentStaticThresholdsModel {
     private String dateTime;
 
     @Column(name="min_price_permit")
-    private  Integer minPricePermit;
+    private  Long minPricePermit;
 
     @Column(name="max_price_permit")
-    private Integer maxPricePermit;
+    private Long maxPricePermit;
 
     @Embedded
     private MetaModel meta;

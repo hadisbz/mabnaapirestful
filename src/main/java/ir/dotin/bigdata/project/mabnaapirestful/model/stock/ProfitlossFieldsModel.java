@@ -23,7 +23,7 @@ public class ProfitlossFieldsModel {
 
     private String account;
 
-    private Integer index;
+    private Long index;
 
     @Embedded
     private MetaModel meta;

@@ -81,7 +81,7 @@ public class AssetsModel implements Serializable {
     @Column(name="entity_type")
     private String entityType;
 
-    @Column(name="categories_Id")
+    @Column(name="categories_id")
     private String categoriesId;
 
     @Embedded

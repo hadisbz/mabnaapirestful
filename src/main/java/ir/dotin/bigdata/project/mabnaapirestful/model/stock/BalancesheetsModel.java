@@ -33,7 +33,7 @@ public class BalancesheetsModel {
     private String fiscalYear;
 
     @Column(name="fiscal_period")
-    private Integer fiscalPeriod;
+    private Long fiscalPeriod;
 
     @Column(name="is_audited")
     private Boolean isAudited;

@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.stock;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.stock.BalancesheetsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.BalancesheetsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.AnnouncementTypeMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.FinancialViewMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;

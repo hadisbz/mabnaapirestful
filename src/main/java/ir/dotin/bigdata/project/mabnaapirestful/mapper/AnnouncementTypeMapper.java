@@ -1,6 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.AnnouncementTypeResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.AnnouncementTypeResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.AnnouncementTypeModel;
 
 public class AnnouncementTypeMapper {

@@ -1,7 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.broker.response.exchange.IndexInstrumentsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.IndexInstrumentsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.IndexInstrumentsModel;
 
 public class IndexInstrumentsMapper {
