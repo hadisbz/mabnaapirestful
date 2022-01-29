@@ -14,7 +14,7 @@ public class ProfitLossesMapper {
         String meetingId= null;
         String reportId= null;
         AnnouncementTypeModel announcementTypeModel= null;
-        FinancialViewTypeModel financialViewModel = null;
+        FinancialViewTypeModel financialViewTypeModel = null;
 
         if(profitLossesResponseInner.getCompany()!=null)
             companyId=profitLossesResponseInner.getCompany().getId();
@@ -30,7 +30,7 @@ public class ProfitLossesMapper {
         }
 
         if(profitLossesResponseInner.getFinancialViewType()!=null){
-            financialViewModel = FinancialViewMapper.map(profitLossesResponseInner.getFinancialViewType());
+            financialViewTypeModel = FinancialViewMapper.map(profitLossesResponseInner.getFinancialViewType());
         }
 
         return new ProfitLossesModel(
@@ -49,7 +49,7 @@ public class ProfitLossesMapper {
                 profitLossesResponseInner.getEnglishComments(),
                 MetaMapper.map(profitLossesResponseInner.getMetaResponse()),
                 announcementTypeModel,
-                financialViewModel
+                financialViewTypeModel
         );
     }
 }

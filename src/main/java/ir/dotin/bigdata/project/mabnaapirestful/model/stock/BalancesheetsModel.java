@@ -1,5 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.model.stock;
 
+import ir.dotin.bigdata.project.mabnaapirestful.model.AnnouncementTypeModel;
+import ir.dotin.bigdata.project.mabnaapirestful.model.FinancialViewTypeModel;
 import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,31 +27,6 @@ public class BalancesheetsModel {
     @Column(name="report_id")
     private String reportId;
 
-    @Column(name="announcement_type_id")
-    private String announcementTypeID;
-
-    @Column(name="announcement_type_title")
-    private String announcementTypeTitle;
-
-    @Column(name="announcement_type_english_title")
-    private String announcementTypeEnglishTitle;
-
-    @Column(name="announcement_type_meta_type")
-    private String announcementTypeMetaType;
-
-
-    @Column(name="financial_view_type_id")
-    private String financialViewTypeID;
-
-    @Column(name="financial_view_type_title")
-    private String financialViewTypeTitle;
-
-    @Column(name="financial_view_type_english_title")
-    private String financialViewTypeEnglishTitle;
-
-    @Column(name="financial_view_type_meta_type")
-    private String financialViewTypeMetaType;
-
     private String date;
 
     @Column(name="fiscal_year")
@@ -72,7 +49,12 @@ public class BalancesheetsModel {
     @Column(name="english_comments")
     private String englishComments;
 
-
     @Embedded
     private MetaModel meta;
+
+    @Embedded
+    private AnnouncementTypeModel announcementTypeModel;
+
+    @Embedded
+    private FinancialViewTypeModel financialViewModel;
 }

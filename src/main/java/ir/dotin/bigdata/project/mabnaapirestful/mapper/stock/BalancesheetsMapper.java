@@ -1,7 +1,11 @@
 package ir.dotin.bigdata.project.mabnaapirestful.mapper.stock;
 
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.BalancesheetsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.AnnouncementTypeMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.FinancialViewMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.model.AnnouncementTypeModel;
+import ir.dotin.bigdata.project.mabnaapirestful.model.FinancialViewTypeModel;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.BalancesheetsModel;
 
 public class BalancesheetsMapper {
@@ -9,14 +13,8 @@ public class BalancesheetsMapper {
         String companyId = null;
         String meetingId= null;
         String reportId= null;
-        String announcementTypeID= null;
-        String announcementTypeTitle= null;
-        String announcementTypeEnglishTitle= null;
-        String announcementTypeMetaType= null;
-        String financialViewTypeID= null;
-        String financialViewTypeTitle= null;
-        String financialViewTypeEnglishTitle= null;
-        String financialViewTypeMetaType= null;
+        AnnouncementTypeModel announcementTypeModel= null;
+        FinancialViewTypeModel financialViewTypeModel = null;
 
         if(balancesheetsResponseInner.getCompany()!=null)
             companyId=balancesheetsResponseInner.getCompany().getId();
@@ -28,34 +26,17 @@ public class BalancesheetsMapper {
             reportId=balancesheetsResponseInner.getReport().getId();
 
         if(balancesheetsResponseInner.getAnnouncementType()!=null){
-            announcementTypeID=balancesheetsResponseInner.getAnnouncementType().getId();
-            announcementTypeTitle=balancesheetsResponseInner.getAnnouncementType().getTitle();
-            announcementTypeEnglishTitle=balancesheetsResponseInner.getAnnouncementType().getEnglishTitle();
-            announcementTypeMetaType= balancesheetsResponseInner.getAnnouncementType().getMetaResponse().getType();
-
+            announcementTypeModel = AnnouncementTypeMapper.map(balancesheetsResponseInner.getAnnouncementType());
         }
 
         if(balancesheetsResponseInner.getFinancialViewType()!=null){
-            financialViewTypeID=balancesheetsResponseInner.getFinancialViewType().getId();
-            financialViewTypeTitle=balancesheetsResponseInner.getFinancialViewType().getTitle();
-            financialViewTypeEnglishTitle=balancesheetsResponseInner.getFinancialViewType().getEnglishTitle();
-            financialViewTypeMetaType=balancesheetsResponseInner.getFinancialViewType().getMetaResponse().getType();
-
+            financialViewTypeModel = FinancialViewMapper.map(balancesheetsResponseInner.getFinancialViewType());
         }
-
         return new BalancesheetsModel(
                 balancesheetsResponseInner.getId(),
                 companyId,
                 meetingId,
                 reportId,
-                announcementTypeID,
-                announcementTypeTitle,
-                announcementTypeEnglishTitle,
-                announcementTypeMetaType,
-                financialViewTypeID,
-                financialViewTypeTitle,
-                financialViewTypeEnglishTitle,
-                financialViewTypeMetaType,
                 balancesheetsResponseInner.getDate(),
                 balancesheetsResponseInner.getFiscalYear(),
                 balancesheetsResponseInner.getFiscalPeriod(),
@@ -64,7 +45,9 @@ public class BalancesheetsMapper {
                 balancesheetsResponseInner.getIsRepresented(),
                 balancesheetsResponseInner.getComments(),
                 balancesheetsResponseInner.getEnglishComments(),
-                MetaMapper.map(balancesheetsResponseInner.getMetaResponse())
+                MetaMapper.map(balancesheetsResponseInner.getMetaResponse()),
+                announcementTypeModel,
+                financialViewTypeModel
         );
     }
 }

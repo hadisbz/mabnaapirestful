@@ -35,7 +35,7 @@ public class ProfitLossesService implements GenericService {
         int skip = 0;
         do {
             String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
-            response = mabnaConf.getResponse("/stock/profitlosses", filter, HttpMethod.GET, ProfitLossesResponse.class);
+            response = mabnaConf.getResponse("/stock/profitlosses?_expand=announcement_type,financial_view_type&_count=1", filter, HttpMethod.GET, ProfitLossesResponse.class);
 
             Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
                         ProfitLossesModel model = ProfitLossesMapper.map(responseInner);

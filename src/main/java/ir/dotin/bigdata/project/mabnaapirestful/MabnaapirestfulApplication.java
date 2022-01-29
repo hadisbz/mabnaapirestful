@@ -322,7 +322,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        indexInstrumentsService.save();
 //        percentageValuesService.save();
 //        boardOfDirectorsItemsService.save();
-//        balancesheetsService.save();
+        balancesheetsService.save();
 
     }
 }
