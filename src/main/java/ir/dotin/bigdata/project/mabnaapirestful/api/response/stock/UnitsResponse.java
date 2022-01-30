@@ -1,6 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful.api.response.stock;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.BaseResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
 import lombok.Getter;
 import lombok.ToString;
@@ -25,7 +26,7 @@ public class UnitsResponse {
 
         private String factor;
 
-
+        private BaseResponse base;
 
         @JsonProperty("meta")
         private MetaResponse metaResponse;

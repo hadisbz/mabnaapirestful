@@ -265,6 +265,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private MeetingInvitesService meetingInvitesService;
 
+    @Autowired
+    private UnitsService unitsService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -357,7 +360,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        instrumentGroupStatesService.save();
 //        epsesService.save();
 //        productionSalesService.save();
-        meetingInvitesService.save();
+//        meetingInvitesService.save();
+        unitsService.save();
 
     }
 }
