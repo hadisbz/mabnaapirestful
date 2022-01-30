@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.MeetingTypesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.MeetingTypesMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.stock.MeetingTypesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.MeetingTypesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.MeetingTypesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;

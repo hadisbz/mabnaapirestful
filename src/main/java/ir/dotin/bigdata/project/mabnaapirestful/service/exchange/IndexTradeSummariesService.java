@@ -3,7 +3,7 @@ package ir.dotin.bigdata.project.mabnaapirestful.service.exchange;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.IndexTradeSummariesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.IndexTradeSummariesMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.exchange.IndexTradeSummariesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.IndexTradeSummariesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.exchange.IndexTradeSummariesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;

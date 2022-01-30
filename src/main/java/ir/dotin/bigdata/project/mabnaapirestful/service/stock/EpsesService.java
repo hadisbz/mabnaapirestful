@@ -3,7 +3,7 @@ package ir.dotin.bigdata.project.mabnaapirestful.service.stock;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.EpsesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.EpsesMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.stock.EpsesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.EpsesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.EpsesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;

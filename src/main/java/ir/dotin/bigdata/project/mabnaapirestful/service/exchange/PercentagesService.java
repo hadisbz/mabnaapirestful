@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.PercentagesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.PercentagesMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.exchange.PercentagesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.PercentagesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.exchange.PercentagesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;

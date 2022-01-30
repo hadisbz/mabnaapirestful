@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.CategoriesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.CategoriesMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.exchange.CategoriesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.CategoriesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.exchange.CategoriesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;

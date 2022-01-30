@@ -1,0 +1,18 @@
+package ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.exchange;
+
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.MetaMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.AssetTypesResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.AssetTypesModel;
+
+
+public class AssetTypesMapper {
+    public static AssetTypesModel map(AssetTypesResponse.AssetTypesResponseInner AssetTypesResponseInner) {
+        return new AssetTypesModel(
+                AssetTypesResponseInner.getId(),
+                AssetTypesResponseInner.getTitle(),
+                AssetTypesResponseInner.getEnglishTitle(),
+                AssetTypesResponseInner.getCode(),
+                MetaMapper.map(AssetTypesResponseInner.getMetaResponse())
+        );
+    }
+}

@@ -3,7 +3,7 @@ package ir.dotin.bigdata.project.mabnaapirestful.service.stock;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.MeetingInvitesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.MeetingInvitesMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.stock.MeetingInvitesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.MeetingInvitesModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.MeetingInvitesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
