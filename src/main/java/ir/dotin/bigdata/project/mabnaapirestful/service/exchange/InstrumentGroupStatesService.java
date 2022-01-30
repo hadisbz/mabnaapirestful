@@ -1,11 +1,11 @@
 package ir.dotin.bigdata.project.mabnaapirestful.service.exchange;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.AssetsResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.InstrumentGroupStatesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.AssetsMapper;
-import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.AssetsModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.exchange.AssetsRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange.InstrumentGroupStatesMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.InstrumentGroupStatesModel;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.exchange.InstrumentGroupStatesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
@@ -15,25 +15,25 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-public class AssetsService implements GenericService {
+public class InstrumentGroupStatesService implements GenericService {
     private final MabnaConf mabnaConf;
-    private final AssetsRepository repository;
+    private final InstrumentGroupStatesRepository repository;
 
-    public AssetsService(MabnaConf mabnaConf, AssetsRepository repository) {
+    public InstrumentGroupStatesService(MabnaConf mabnaConf, InstrumentGroupStatesRepository repository) {
         this.mabnaConf = mabnaConf;
         this.repository = repository;
     }
 
     @Override
     public void save() throws JsonProcessingException {
-        ResponseEntity<AssetsResponse> response;
+        ResponseEntity<InstrumentGroupStatesResponse> response;
         int skip = 0;
         do {
             String filter = FilterResultsMabnaApi.filterByCountAndOptionalSkip(100, skip);
-            response = mabnaConf.getResponse("/exchange/assets", filter, HttpMethod.GET, AssetsResponse.class);
+            response = mabnaConf.getResponse("/exchange/instrumentgroupstates", filter, HttpMethod.GET, InstrumentGroupStatesResponse.class);
 
             Objects.requireNonNull(response.getBody()).getData().forEach(responseInner -> {
-                        AssetsModel model = AssetsMapper.map(responseInner);
+                        InstrumentGroupStatesModel model = InstrumentGroupStatesMapper.map(responseInner);
                         repository.save(model);
                     }
             );

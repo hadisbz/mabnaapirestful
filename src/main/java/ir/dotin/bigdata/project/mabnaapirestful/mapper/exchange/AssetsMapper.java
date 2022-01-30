@@ -3,6 +3,10 @@ package ir.dotin.bigdata.project.mabnaapirestful.mapper.exchange;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.MetaMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.AssetsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.AssetsModel;
+import ir.dotin.bigdata.project.mabnaapirestful.model.exchange.CategoriesModel;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class AssetsMapper {
     public static AssetsModel map(AssetsResponse.AssetsResponseInner assetsResponseInner){
@@ -14,6 +18,10 @@ public class AssetsMapper {
         String mortgageLoanId=null;
         String entityId=null;
         String entityType=null;
+        List<CategoriesModel> categoriesModelList = null;
+
+        if(assetsResponseInner.getCategoriesResponses() != null)
+            categoriesModelList = assetsResponseInner.getCategoriesResponses().stream().map(CategoriesMapper::map).collect(Collectors.toList());
 
         if(assetsResponseInner.getType()!=null)
             assetTypeId=assetsResponseInner.getType().getId();
@@ -40,7 +48,6 @@ public class AssetsMapper {
         }
 
         return new AssetsModel(
-                null,
                 assetsResponseInner.getId(),
                 assetTypeId,
                 assetsResponseInner.getTradeSymbol(),
@@ -62,7 +69,7 @@ public class AssetsMapper {
                 assetsResponseInner.getEnglishStateDescription(),
                 entityId,
                 entityType,
-                null,
+                categoriesModelList,
                 MetaMapper.map(assetsResponseInner.getMetaResponse())
         );
 

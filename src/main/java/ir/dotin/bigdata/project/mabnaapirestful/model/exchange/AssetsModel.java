@@ -16,10 +16,6 @@ import java.util.List;
 @NoArgsConstructor
 public class AssetsModel implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "local_id")
-    private Long localId;
-
     private String id;
 
     @Column(name="asset_type_id")
@@ -81,8 +77,9 @@ public class AssetsModel implements Serializable {
     @Column(name="entity_type")
     private String entityType;
 
-    @Column(name="categories_id")
-    private String categoriesId;
+    @JoinTable(name = "assets_categories_join_table")
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<CategoriesModel> categories;
 
     @Embedded
     private MetaModel meta;
