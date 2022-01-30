@@ -5,7 +5,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.ProfitLossIte
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.ProfitLossItemsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ProfitLossItemsModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ProfitLossItemsRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.stock.ProfitLossItemsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;

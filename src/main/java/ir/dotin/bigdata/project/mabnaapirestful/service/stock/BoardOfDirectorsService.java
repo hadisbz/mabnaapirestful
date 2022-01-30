@@ -6,7 +6,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.BoardOfDirectorsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.BoardOfDirectorsModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.BoardOfDirectorsRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.stock.BoardOfDirectorsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

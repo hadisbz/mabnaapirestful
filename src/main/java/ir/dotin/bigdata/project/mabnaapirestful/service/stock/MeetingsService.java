@@ -5,7 +5,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.MeetingsRespo
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.MeetingsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.MeetingsModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.MeetingsRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.stock.MeetingsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
