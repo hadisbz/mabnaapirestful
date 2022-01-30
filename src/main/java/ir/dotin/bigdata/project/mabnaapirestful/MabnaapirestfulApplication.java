@@ -255,6 +255,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private InstrumentGroupStatesService instrumentGroupStatesService;
 
+    @Autowired
+    private EpsesService epsesService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -344,7 +347,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        cashflowFieldsService.save();
 //        reportsService.save();
 //        assetCategoriesService.save();
-        instrumentGroupStatesService.save();
+//        instrumentGroupStatesService.save();
+//        epsesService.save();
 
     }
 }
