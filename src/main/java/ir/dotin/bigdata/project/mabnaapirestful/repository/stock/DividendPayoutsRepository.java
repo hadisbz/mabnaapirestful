@@ -1,4 +1,4 @@
-package ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.stock;
+package ir.dotin.bigdata.project.mabnaapirestful.repository.stock;
 
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.DividendPayoutsModel;
 import org.springframework.data.jpa.repository.JpaRepository;

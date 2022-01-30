@@ -5,7 +5,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.ShareHoldersR
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.ShareHoldersMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ShareHoldersModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.stock.ShareHoldersRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ShareHoldersRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;

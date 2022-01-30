@@ -11,11 +11,11 @@ import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractStyles
 import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractTypesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.exchange.*;
+import ir.dotin.bigdata.project.mabnaapirestful.service.stock.*;
 import ir.dotin.bigdata.project.mabnaapirestful.service.fund.DividendPaymentsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.fund.FundValuesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.fund.FundsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.fund.RatingsService;
-import ir.dotin.bigdata.project.mabnaapirestful.service.stock.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -202,7 +202,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private IndexInstrumentEffectsService indexInstrumentEffectsService;
 
-    @Autowired TradesService tradesService;
+    @Autowired
+    TradesService tradesService;
 
     @Autowired
     private InstrumentBaseVolumesService instrumentBaseVolumesService;
@@ -260,6 +261,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
     @Autowired
     private ProductionSalesService productionSalesService;
+
+    @Autowired
+    private MeetingInvitesService meetingInvitesService;
 
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
@@ -353,6 +357,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        instrumentGroupStatesService.save();
 //        epsesService.save();
 //        productionSalesService.save();
+        meetingInvitesService.save();
 
     }
 }

@@ -6,7 +6,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.DividendPayoutsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.DividendPayoutsModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.stock.DividendPayoutsRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.DividendPayoutsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

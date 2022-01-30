@@ -6,7 +6,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
 import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.CompaniesMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.CompaniesModel;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.stock.CompaniesRepository;
+import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.CompaniesRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
