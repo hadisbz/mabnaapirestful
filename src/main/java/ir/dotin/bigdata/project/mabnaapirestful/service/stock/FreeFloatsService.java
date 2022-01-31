@@ -3,7 +3,7 @@ package ir.dotin.bigdata.project.mabnaapirestful.service.stock;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.FreeFloatsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.stock.FreeFloatsMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.FreeFloatsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.FreeFloatsModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.FreeFloatsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;

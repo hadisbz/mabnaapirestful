@@ -1,10 +1,5 @@
 package ir.dotin.bigdata.project.mabnaapirestful.model.stock;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.StatusResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange.ReportsResponse;
-import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.CompaniesResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;

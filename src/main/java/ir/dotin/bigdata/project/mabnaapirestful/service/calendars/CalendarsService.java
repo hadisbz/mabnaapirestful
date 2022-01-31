@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.calendars.CalendarsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.calendars.CalendarsMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.calendars.CalendarsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.calendars.CalendarsModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.calendars.CalendarsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.util.FilterResultsMabnaApi;

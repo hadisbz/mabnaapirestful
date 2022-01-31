@@ -25,19 +25,19 @@ public class AnnouncementTypeModel {
     private String announcementTypeMetaType;
 
     @Column(name = "announcement_type_meta_version")
-    private Long announcementTypeVersion;
+    private Long announcementTypeMetaVersion;
 
     @Column(name = "announcement_type_meta_state")
-    private String announcementTypeState;
+    private String announcementTypeMetaState;
 
     @Column(name = "announcement_type_meta_insert_date_time")
-    private String announcementTypeInsertDateTime;
+    private String announcementTypeMetaInsertDateTime;
 
     @Column(name = "announcement_type_meta_update_date_time")
-    private String announcementTypeUpdateDateTime;
+    private String announcementTypeMetaUpdateDateTime;
 
     @Column(name = "announcement_type_meta_delete_date_time")
-    private String announcementTypeDeleteDateTime;
+    private String announcementTypeMetaDeleteDateTime;
 
 
 }

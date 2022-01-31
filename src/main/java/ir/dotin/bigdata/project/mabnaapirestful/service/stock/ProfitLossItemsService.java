@@ -3,7 +3,7 @@ package ir.dotin.bigdata.project.mabnaapirestful.service.stock;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.stock.ProfitLossItemsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.conf.MabnaConf;
-import ir.dotin.bigdata.project.mabnaapirestful.repository.contracts.mapper.stock.ProfitLossItemsMapper;
+import ir.dotin.bigdata.project.mabnaapirestful.mapper.stock.ProfitLossItemsMapper;
 import ir.dotin.bigdata.project.mabnaapirestful.model.stock.ProfitLossItemsModel;
 import ir.dotin.bigdata.project.mabnaapirestful.repository.stock.ProfitLossItemsRepository;
 import ir.dotin.bigdata.project.mabnaapirestful.service.GenericService;

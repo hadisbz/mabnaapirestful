@@ -1,6 +1,5 @@
 package ir.dotin.bigdata.project.mabnaapirestful.model.exchange;
 
-import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

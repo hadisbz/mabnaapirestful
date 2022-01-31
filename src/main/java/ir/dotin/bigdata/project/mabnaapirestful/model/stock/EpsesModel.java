@@ -1,8 +1,5 @@
 package ir.dotin.bigdata.project.mabnaapirestful.model.stock;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import ir.dotin.bigdata.project.mabnaapirestful.model.AnnouncementTypeModel;
-import ir.dotin.bigdata.project.mabnaapirestful.model.FinancialViewTypeModel;
 import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;

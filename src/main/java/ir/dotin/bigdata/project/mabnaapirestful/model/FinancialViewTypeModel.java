@@ -25,17 +25,17 @@ public class FinancialViewTypeModel {
     private String financialViewTypeMetaType;
 
     @Column(name = "financial_view_type_meta_version")
-    private Long financialViewTypeVersion;
+    private Long financialViewTypeMetaVersion;
 
     @Column(name = "financial_view_type_meta_state")
-    private String financialViewTypeState;
+    private String financialViewTypeMetaState;
 
     @Column(name = "financial_view_type_meta_insert_date_time")
-    private String financialViewTypeInsertDateTime;
+    private String financialViewTypeMetaInsertDateTime;
 
     @Column(name = "financial_view_type_meta_update_date_time")
-    private String financialViewTypeUpdateDateTime;
+    private String financialViewTypeMetaUpdateDateTime;
 
     @Column(name = "financial_view_type_meta_delete_date_time")
-    private String financialViewTypeDeleteDateTime;
+    private String financialViewTypeMetaDeleteDateTime;
 }

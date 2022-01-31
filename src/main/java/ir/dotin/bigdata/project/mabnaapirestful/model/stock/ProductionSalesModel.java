@@ -1,7 +1,6 @@
 package ir.dotin.bigdata.project.mabnaapirestful.model.stock;
 
 import ir.dotin.bigdata.project.mabnaapirestful.model.AnnouncementTypeModel;
-import ir.dotin.bigdata.project.mabnaapirestful.model.FinancialViewTypeModel;
 import ir.dotin.bigdata.project.mabnaapirestful.model.MetaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
