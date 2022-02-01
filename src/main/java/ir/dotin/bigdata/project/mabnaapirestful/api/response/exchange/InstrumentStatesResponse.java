@@ -1,6 +1,9 @@
 package ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.InstrumentStateStateResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.InstrumentStateTypeResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -24,8 +27,12 @@ public class InstrumentStatesResponse {
 
         private String date;
 
-        private InstrumentExchangeStatesResponse.InstrumentExchangeStatesResponseInner type;
+        private InstrumentStateTypeResponse type;
 
+        private InstrumentStateStateResponse state;
+
+        @JsonProperty("meta")
+        private MetaResponse metaResponse;
 
     }
 }
