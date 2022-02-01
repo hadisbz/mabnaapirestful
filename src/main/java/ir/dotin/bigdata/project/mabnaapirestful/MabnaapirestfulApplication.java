@@ -274,6 +274,12 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private ProductionSaleItemsService productionSaleItemsService;
 
+    @Autowired
+    private ShareHoldersItemsService shareHoldersItemsService;
+
+    @Autowired
+    private BalancesheetItemsService balancesheetItemsService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -358,7 +364,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        boardOfDirectorsItemsService.save();
 //        balancesheetsService.save();
 //        profitLossItemsService.save();
-        cashFlowsService.save();
+//        cashFlowsService.save();
 //        cashFlowItemsService.save();
 //        cashflowFieldsService.save();
 //        reportsService.save();
@@ -370,6 +376,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        unitsService.save();
 //        capitalChangesService.save();
 //        productionSaleItemsService.save();
+//        shareHoldersItemsService.save();
+//        balancesheetItemsService.save();
 
     }
 }
