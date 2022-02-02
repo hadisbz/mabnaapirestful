@@ -14,6 +14,7 @@ public class AssetsMapper {
         String exchangeId=null;
         String assetStateId=null;
         String companyId=null;
+        String bondId =null;
         String fundId=null;
         String mortgageLoanId=null;
         String entityId=null;
@@ -47,6 +48,9 @@ public class AssetsMapper {
             entityType=assetsResponseInner.getEntity().getMetaResponse().getType();
         }
 
+        if(assetsResponseInner.getBond()!=null)
+            bondId=assetsResponseInner.getBond().getId();
+
         return new AssetsModel(
                 assetsResponseInner.getId(),
                 assetTypeId,
@@ -59,6 +63,7 @@ public class AssetsMapper {
                 exchangeId,
                 assetStateId,
                 companyId,
+                bondId,
                 fundId,
                 mortgageLoanId,
                 assetsResponseInner.getFingilishName(),

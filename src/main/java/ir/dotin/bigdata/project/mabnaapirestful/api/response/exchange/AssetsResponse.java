@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.EntityResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.StockResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.bonds.BondsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.fund.FundsResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.mortgageLoans.MortgageLoansResponse;
 import lombok.Getter;
@@ -49,6 +50,8 @@ public class AssetsResponse {
         private AssetStatesResponse.AssetStatesResponseInner state;
 
         private StockResponse stock;
+
+        private BondsResponse.BondsResponseInner bond;
 
         private FundsResponse.FundsResponseInner fund;
 

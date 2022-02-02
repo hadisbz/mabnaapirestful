@@ -47,6 +47,9 @@ public class AssetsModel implements Serializable {
     @Column(name="company_id")
     private String companyId;
 
+    @Column(name="bind_id")
+    private String bindId;
+
     @Column(name="fund_id")
     private String fundId;
 
