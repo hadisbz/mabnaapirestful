@@ -1,5 +1,7 @@
 package ir.dotin.bigdata.project.mabnaapirestful;
 
+import ir.dotin.bigdata.project.mabnaapirestful.service.bonds.BondsService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.bonds.InterestPaymentsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.broker.BrokersService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.MortgageLoans.MortgageLoansService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.TestService;
@@ -286,6 +288,12 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private InstrumentStatesService instrumentStatesService;
 
+    @Autowired
+    private InterestPaymentsService interestPaymentsService;
+
+    @Autowired
+    private BondsService bondsService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -386,6 +394,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        balancesheetItemsService.save();
 //        tradeDetailsService.save();
 //        instrumentStatesService.save();
+//        interestPaymentsService.save();
+//        bondsService.save();
 
     }
 }
