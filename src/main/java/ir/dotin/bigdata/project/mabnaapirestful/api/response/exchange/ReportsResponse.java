@@ -3,6 +3,7 @@ package ir.dotin.bigdata.project.mabnaapirestful.api.response.exchange;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.EntityResponse;
 import ir.dotin.bigdata.project.mabnaapirestful.api.response.MetaResponse;
+import ir.dotin.bigdata.project.mabnaapirestful.api.response.StockResponse;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -31,6 +32,8 @@ public class ReportsResponse {
         private String fiscalYear;
 
         private List<ReportSubTitlesResponse.ReportSubTitlesResponseInner> subtitles ;
+
+        private StockResponse stock;
 
         private EntityResponse entity;
 

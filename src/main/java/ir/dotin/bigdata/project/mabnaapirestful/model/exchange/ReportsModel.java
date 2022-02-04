@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(schema = "public", name = "reports")
@@ -30,18 +31,22 @@ public class ReportsModel {
     @Column(name = "fiscal_year")
     private String fiscalYear;
 
-    @Column(name = "subtitles_id")
-    private String subtitlesId;
+    @JoinTable(name = "report_subtitle_join_table")
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<ReportSubTitlesModel> subtitles;
 
     @Column(name = "entity_id")
     private String entityId;
 
+    @Column(name = "company_id")
+    private String companyId;
+
     @Column(name = "entity_type")
     private String entityType;
 
-    @Column(name="images_id")
-    private String imagesId;
-
+    @JoinTable(name="report_image_join_table")
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<ReportImagesModel> images;
 
     @Embedded
     private MetaModel meta;

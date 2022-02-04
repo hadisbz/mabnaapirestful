@@ -160,8 +160,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private CategoriesService categoriesService;
 
-//    @Autowired
-//    private ReportsService reportsService;
+    @Autowired
+    private ReportsService reportsService;
 
     @Autowired
     private BrokersService brokersService;
@@ -388,7 +388,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        cashFlowsService.save();
 //        cashFlowItemsService.save();
 //        cashflowFieldsService.save();
-//        reportsService.save();
+        reportsService.save();
 //        assetCategoriesService.save();
 //        instrumentGroupStatesService.save();
 //        epsesService.save();
@@ -404,7 +404,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        interestPaymentsService.save();
 //        bondsService.save();
 //        contractHistoryService.save();
-        intradayTradesService.save();
+//        intradayTradesService.save();
 
     }
 }
