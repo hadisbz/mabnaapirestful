@@ -9,6 +9,7 @@ import ir.dotin.bigdata.project.mabnaapirestful.service.bonds.BondAuthorityTypes
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.CalendarsService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.DatesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.calendars.OccasionTypesService;
+import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractHistoryService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractStylesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractTypesService;
 import ir.dotin.bigdata.project.mabnaapirestful.service.contracts.ContractsService;
@@ -294,6 +295,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private BondsService bondsService;
 
+    @Autowired
+    private ContractHistoryService contractHistoryService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -396,6 +400,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        instrumentStatesService.save();
 //        interestPaymentsService.save();
 //        bondsService.save();
+        contractHistoryService.save();
 
     }
 }
