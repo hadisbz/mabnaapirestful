@@ -298,6 +298,9 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
     @Autowired
     private ContractHistoryService contractHistoryService;
 
+    @Autowired
+    private IntradayTradesService intradayTradesService;
+
     public static void main(String[] args) {
         SpringApplication.run(MabnaapirestfulApplication.class, args).close();
     }
@@ -400,7 +403,8 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        instrumentStatesService.save();
 //        interestPaymentsService.save();
 //        bondsService.save();
-        contractHistoryService.save();
+//        contractHistoryService.save();
+        intradayTradesService.save();
 
     }
 }
