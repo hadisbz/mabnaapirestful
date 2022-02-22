@@ -17,7 +17,7 @@ public class TestService {
     }
 
     public void test() throws IOException {
-        ResponseEntity<String> response = mabnaConf.getResponse("/exchange/reports", null, HttpMethod.GET, String.class);
+        ResponseEntity<String> response = mabnaConf.getResponse("/stock/units", null, HttpMethod.GET, String.class);
         System.out.println(response.getBody());
     }
 }

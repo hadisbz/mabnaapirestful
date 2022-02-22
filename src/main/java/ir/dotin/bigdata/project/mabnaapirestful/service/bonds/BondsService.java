@@ -37,6 +37,6 @@ public class BondsService implements GenericService {
                     }
             );
             skip += 100;
-        } while (!response.getBody().getData().isEmpty());
+        } while (!response.getBody().getData().isEmpty() && response.getBody().getData().size()>99);
     }
 }

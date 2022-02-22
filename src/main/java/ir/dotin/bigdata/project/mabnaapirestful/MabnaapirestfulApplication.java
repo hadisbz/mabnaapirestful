@@ -313,7 +313,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 
         // categoriesService.save();
 //        assetsService.save();
-        testService.test();
+//        testService.test();
 //        profitLossesService.save();
 //        calendarsService.save();
 //        datesService.save();
@@ -388,7 +388,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        cashFlowsService.save();
 //        cashFlowItemsService.save();
 //        cashflowFieldsService.save();
-        reportsService.save();
+//        reportsService.save();
 //        assetCategoriesService.save();
 //        instrumentGroupStatesService.save();
 //        epsesService.save();
@@ -404,7 +404,7 @@ public class MabnaapirestfulApplication implements CommandLineRunner {
 //        interestPaymentsService.save();
 //        bondsService.save();
 //        contractHistoryService.save();
-//        intradayTradesService.save();
+        intradayTradesService.save();
 
     }
 }
